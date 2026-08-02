@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informasi PKB - SAPA PKB SIKKa</title>
+<style>
+:root{
+  --navy:#082b4c;
+  --blue:#087fbd;
+  --blue2:#0b9bd7;
+  --gold:#f4c542;
+  --white:#fff;
+  --soft:#f4f8fb;
+  --text:#15283a;
+  --muted:#607080;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--soft);color:var(--text);line-height:1.7}
+header{
+  position:sticky;top:0;z-index:1000;
+  background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.12);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:13px 5%;gap:20px;
+}
+.brand{font-size:25px;color:var(--navy);font-weight:500;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.nav a{
+  color:#263238;text-decoration:none;padding:10px 12px;border-bottom:4px solid transparent;
+  transition:.25s;white-space:nowrap
+}
+.nav a:hover,.nav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+.hero{
+  min-height:390px;display:flex;align-items:center;justify-content:center;text-align:center;
+  color:white;padding:70px 20px;
+  background-image:linear-gradient(rgba(8,43,76,.72),rgba(8,43,76,.78)),url('gedung-gubernur-ntt.jpeg');
+  background-size:cover;background-position:center;
+}
+.hero-content{max-width:900px}
+.hero .icon{font-size:52px;margin-bottom:8px}
+.hero h1{font-size:46px;margin:0 0 12px;font-weight:800}
+.hero p{font-size:19px;margin:0 auto;max-width:760px}
+.container{width:90%;max-width:1100px;margin:42px auto}
+.page-title{text-align:center;margin-bottom:28px}
+.page-title h2{font-size:32px;color:var(--navy);margin:0 0 8px}
+.page-title p{color:var(--muted)}
+.menu-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:35px}
+.menu-card{
+  background:#fff;border-radius:15px;padding:24px;text-align:center;text-decoration:none;color:var(--text);
+  box-shadow:0 5px 18px rgba(0,0,0,.08);transition:.25s
+}
+.menu-card:hover{transform:translateY(-4px);box-shadow:0 9px 25px rgba(0,0,0,.13)}
+.menu-card .icon{font-size:38px}.menu-card h3{margin:7px 0 0;color:var(--blue)}
+.card{
+  background:#fff;border-radius:16px;padding:30px;margin-bottom:25px;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);border-left:5px solid var(--blue)
+}
+.card-icon{font-size:40px}.card h2{margin:5px 0 12px;color:var(--navy)}
+.info{
+  background:#eef7fc;border-radius:12px;padding:18px 20px;margin-top:18px
+}
+.info strong{color:var(--blue)}
+ul{padding-left:25px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{
+  display:inline-block;text-decoration:none;padding:12px 20px;border-radius:9px;font-weight:bold;
+  transition:.25s
+}
+.primary{background:var(--blue);color:#fff}.primary:hover{background:#056795}
+.secondary{background:#e5edf2;color:var(--text)}.secondary:hover{background:#d6e1e7}
+footer{background:var(--navy);color:white;text-align:center;padding:28px 15px;margin-top:50px}
+@media(max-width:850px){
+  header{flex-direction:column;align-items:center}
+  .nav{justify-content:center}
+  .hero h1{font-size:34px}
+  .menu-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">🚗 SAPA PKB SIKKa</div>
+  <nav class="nav">
+    <a href="index.html">🏠 Beranda</a>
+    <a href="informasi-pkb.html" class="active">🚗 Informasi PKB</a>
+    <a href="jatuh-tempo.html">📅 Jatuh Tempo</a>
+    <a href="pembayaran.html">💳 Pembayaran</a>
+    <a href="hubungi-kami.html">📞 Hubungi Kami</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="icon">🚗</div>
+    <h1>Informasi Pajak Kendaraan Bermotor</h1>
+    <p>Kenali Pajak Kendaraan Bermotor (PKB) melalui informasi yang sederhana, mudah dipahami, dan mudah diakses.</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="page-title">
+    <h2>📚 Edukasi PKB</h2>
+    <p>Pilih materi yang ingin Anda pelajari.</p>
+  </div>
+
+  <div class="menu-cards">
+    <a class="menu-card" href="#apa-itu-pkb">
+      <div class="icon">📖</div><h3>Apa Itu PKB?</h3>
+    </a>
+    <a class="menu-card" href="#wajib-pkb">
+      <div class="icon">👤</div><h3>Wajib PKB</h3>
+    </a>
+    <a class="menu-card" href="#manfaat-pkb">
+      <div class="icon">🎯</div><h3>Manfaat PKB</h3>
+    </a>
+  </div>
+
+  <section class="card" id="apa-itu-pkb">
+    <div class="card-icon">📖</div>
+    <h2>Apa Itu Pajak Kendaraan Bermotor?</h2>
+    <p>Pajak Kendaraan Bermotor atau PKB adalah pajak atas kepemilikan dan/atau penguasaan kendaraan bermotor sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.</p>
+    <div class="info"><strong>💡 Tahukah Anda?</strong><br>
+    Pajak kendaraan merupakan salah satu sumber penerimaan daerah yang dapat mendukung penyelenggaraan pemerintahan dan pembangunan daerah.</div>
+  </section>
+
+  <section class="card" id="wajib-pkb">
+    <div class="card-icon">👤</div>
+    <h2>Siapa yang Wajib Membayar PKB?</h2>
+    <p>Pemilik atau pihak yang menguasai kendaraan bermotor memiliki kewajiban memenuhi pembayaran PKB sesuai ketentuan yang berlaku.</p>
+    <ul>
+      <li>Pemilik kendaraan bermotor.</li>
+      <li>Pihak yang menguasai kendaraan bermotor sesuai ketentuan.</li>
+      <li>Pemilik kendaraan perlu memperhatikan masa pajak dan tanggal jatuh tempo.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="manfaat-pkb">
+    <div class="card-icon">🎯</div>
+    <h2>Mengapa Kita Perlu Membayar PKB?</h2>
+    <p>Membayar pajak kendaraan tepat waktu merupakan bentuk kepatuhan terhadap kewajiban perpajakan sekaligus kontribusi masyarakat terhadap daerah.</p>
+    <div class="info">
+      ✅ Mendukung penerimaan daerah<br>
+      ✅ Mendukung pelayanan publik<br>
+      ✅ Mendukung pembangunan daerah<br>
+      ✅ Membantu menghindari keterlambatan pembayaran
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-icon">💡</div>
+    <h2>Tips Membayar PKB Tepat Waktu</h2>
+    <ul>
+      <li>Catat tanggal jatuh tempo kendaraan.</li>
+      <li>Siapkan dokumen yang diperlukan.</li>
+      <li>Gunakan kanal pembayaran resmi.</li>
+      <li>Simpan bukti pembayaran.</li>
+      <li>Jangan menunggu sampai mendekati jatuh tempo.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="card-icon">📅</div>
+    <h2>Selanjutnya Pelajari Jatuh Tempo</h2>
+    <p>Setelah memahami PKB, Anda dapat melanjutkan ke informasi mengenai jatuh tempo Pajak Kendaraan Bermotor.</p>
+    <div class="btns">
+      <a class="btn primary" href="jatuh-tempo.html">📅 Pelajari Jatuh Tempo →</a>
+      <a class="btn secondary" href="index.html">🏠 Kembali ke Beranda</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>🚗 SAPA PKB SIKKa</strong>
+  <p>Media Edukasi Digital Pajak Kendaraan Bermotor</p>
+  <small>© 2026 SAPA PKB SIKKa</small>
+</footer>
+
+</body>
+</html>
