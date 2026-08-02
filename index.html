@@ -5,6 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SAPA PKB SIKKa - Beranda</title>
 <style>
+  .hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.btn-edukasi {
+  background: var(--blue);
+  color: white;
+}
+
+.btn-tempo {
+  background: var(--gold);
+  color: white;
+}
+
+.btn-hero:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 :root {
   --navy:#082b4c;
   --blue:#087fbd;
@@ -210,12 +242,15 @@ body {
     <p><strong>SAPA PKB SIKKa</strong> hadir sebagai media edukasi digital untuk membantu masyarakat memperoleh informasi mengenai Pajak Kendaraan Bermotor (PKB) secara mudah, cepat, dan mudah diakses.</p>
 
     <p>Temukan informasi mengenai PKB, jatuh tempo, pembayaran, persyaratan layanan, serta edukasi perpajakan kendaraan bermotor.</p>
+  <div class="hero-buttons">
+  <a href="#edukasi-pkb" class="btn-hero btn-edukasi">
+    🚗 Edukasi PKB
+  </a>
 
-    <div class="buttons">
-      <a class="btn btn-primary" href="#informasi">🚗 Mulai Edukasi PKB</a>
-      <a class="btn btn-secondary" href="#jatuh-tempo">📅 Pelajari Jatuh Tempo</a>
-    </div>
-  </div>
+  <a href="#jatuh-tempo" class="btn-hero btn-tempo">
+    📅 Jatuh Tempo
+  </a>
+</div>
 </section>
 
 <section class="section">
