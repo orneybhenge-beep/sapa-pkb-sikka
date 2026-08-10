@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jatuh Tempo | SAPA PKB SIKKa</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f4f0;
+    color: #333;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    min-height: 78px;
+    padding: 12px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(45, 25, 30, 0.97);
+
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: #e2b36a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.logo-text h2 {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    color: #e8d5b2;
+    font-size: 10px;
+}
+
+
+/* MENU */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    background: #e2b36a;
+    color: #4b202c;
+}
+
+.nav-menu a.active {
+    background: #e2b36a;
+    color: #4b202c;
+    font-weight: 600;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header {
+    padding: 75px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4b202c,
+            #274238
+        );
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    border-radius: 30px;
+
+    color: #f2d39b;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+}
+
+.page-header h1 {
+    font-size: clamp(38px, 6vw, 60px);
+    margin-bottom: 15px;
+}
+
+.page-header h1 span {
+    color: #e3b66c;
+}
+
+.page-header p {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #eeeeee;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-title small {
+    color: #9b6c35;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    color: #4b202c;
+
+    font-size: 30px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: white;
+
+    padding: 35px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.card h2 {
+    color: #4b202c;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   VIDEO EDUKASI
+========================= */
+
+.video-section {
+    margin: 70px 0;
+}
+
+.video-card {
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+}
+
+.video-card video {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    background: #111;
+}
+
+.video-caption {
+    padding: 28px 32px;
+}
+
+.video-caption h3 {
+    color: #4b202c;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.video-caption p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-bottom: 60px;
+}
+
+.box {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 16px;
+
+    background: #f2e3cf;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}
+
+.box h3 {
+    color: #4b202c;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ALUR
+========================= */
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 60px;
+}
+
+.step {
+    background: white;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+
+    border: 1px solid #eeeeee;
+}
+
+.number {
+    width: 42px;
+    height: 42px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #4b202c;
+
+    color: #e3b66c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+.step h3 {
+    color: #4b202c;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   WARNING
+========================= */
+
+.warning {
+    padding: 30px;
+
+    margin-bottom: 50px;
+
+    border-radius: 18px;
+
+    background: #fff8e9;
+
+    border-left: 6px solid #e2b36a;
+}
+
+.warning h2 {
+    color: #4b202c;
+
+    margin-bottom: 12px;
+
+    font-size: 22px;
+}
+
+.warning p {
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   HIGHLIGHT
+========================= */
+
+.highlight {
+    padding: 35px;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4b202c,
+            #274238
+        );
+
+    color: white;
+}
+
+.highlight h2 {
+    color: #e3b66c;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.highlight p {
+    max-width: 750px;
+
+    margin: auto;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #eeeeee;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.navigation {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 45px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-gold {
+    background: #e3b66c;
+
+    color: #45202c;
+}
+
+.btn-gold:hover {
+    background: #f1ce91;
+
+    transform: translateY(-3px);
+}
+
+.btn-green {
+    background: #274238;
+
+    color: white;
+}
+
+.btn-green:hover {
+    background: #365c4e;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #181818;
+
+    color: #cccccc;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    font-size: 12px;
+}
+
+footer strong {
+    color: #e2b36a;
+}
+
+footer p + p {
+    margin-top: 7px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 15px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+
+        padding: 8px 7px;
+    }
+
+    .page-header {
+        padding: 55px 20px;
+    }
+
+    .container {
+        padding: 50px 18px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    .video-caption {
+        padding: 22px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            🚗
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SAPA PKB SIKKa</h2>
+
+            <span>
+                Sarana Pelayanan & Informasi PKB
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <ul class="nav-menu">
+
+        <li>
+            <a href="index.html">
+                🏠 Beranda
+            </a>
+        </li>
+
+        <li>
+            <a href="informasi-pkb.html">
+                🚗 Informasi PKB
+            </a>
+        </li>
+
+        <li>
+            <a href="jatuh-tempoh.html" class="active">
+                📅 Jatuh Tempo
+            </a>
+        </li>
+
+        <li>
+            <a href="pembayaran.html">
+                💳 Pembayaran
+            </a>
+        </li>
+
+        <li>
+            <a href="persyaratan.html">
+                📋 Persyaratan
+            </a>
+        </li>
+
+        <li>
+            <a href="hubungi-kami.html">
+                ☎️ Hubungi Kami
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="page-header">
+
+    <div class="badge">
+        INFORMASI JATUH TEMPO
+    </div>
+
+    <h1>
+        Jatuh <span>Tempo PKB</span>
+    </h1>
+
+    <p>
+        Jangan lewatkan batas waktu pembayaran Pajak
+        Kendaraan Bermotor Anda. Kenali dan perhatikan
+        tanggal jatuh tempo kendaraan.
+    </p>
+
+</header>
+
+
+
+<!-- =====================================================
+     KONTEN
+===================================================== -->
+
+<main class="container">
+
+
+    <!-- =========================
+         PENGERTIAN
+    ========================== -->
+
+    <div class="section-title">
+
+        <small>
+            KENALI JATUH TEMPO
+        </small>
+
+        <h2>
+            Apa yang Dimaksud Jatuh Tempo PKB?
+        </h2>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            📅 Jatuh Tempo Pajak Kendaraan
+        </h2>
+
+        <p>
+            Jatuh tempo Pajak Kendaraan Bermotor merupakan
+            batas waktu pemenuhan kewajiban pembayaran PKB
+            sesuai dengan ketentuan yang berlaku.
+        </p>
+
+        <p>
+            Wajib pajak dianjurkan memperhatikan tanggal
+            jatuh tempo kendaraan agar pembayaran dapat
+            dilakukan tepat waktu.
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         VIDEO EDUKASI
+    ========================== -->
+
+    <section class="video-section">
+
+        <div class="section-title">
+
+            <small>
+                EDUKASI PKB
+            </small>
+
+            <h2>
+                Video Edukasi Jatuh Tempo PKB
+            </h2>
+
+        </div>
+
+
+        <div class="video-card">
+
+            <video
+                controls
+                preload="metadata">
+
+                <source
+                    src="video-edukasi-pkb.mp4"
+                    type="video/mp4">
+
+                Browser Anda tidak mendukung
+                pemutaran video.
+
+            </video>
+
+
+            <div class="video-caption">
+
+                <h3>
+                    🎥 Kenali Jatuh Tempo Pajak Kendaraan Bermotor
+                </h3>
+
+                <p>
+                    Simak video edukasi berikut untuk memahami
+                    pentingnya mengetahui dan memenuhi kewajiban
+                    Pajak Kendaraan Bermotor tepat waktu.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MENGAPA PENTING
+    ========================== -->
+
+    <div class="section-title">
+
+        <small>
+            KEPATUHAN PAJAK
+        </small>
+
+        <h2>
+            Mengapa Harus Memperhatikan Jatuh Tempo?
+        </h2>
+
+    </div>
+
+
+    <div class="grid">
+
+
+        <div class="box">
+
+            <div class="icon">
+                ⏰
+            </div>
+
+            <h3>
+                Bayar Tepat Waktu
+            </h3>
+
+            <p>
+                Membantu wajib pajak memenuhi kewajiban
+                pembayaran PKB sesuai waktu yang ditentukan.
+            </p>
+
+        </div>
+
+
+        <div class="box">
+
+            <div class="icon">
+                📋
+            </div>
+
+            <h3>
+                Tertib Administrasi
+            </h3>
+
+            <p>
+                Membantu menjaga administrasi perpajakan
+                kendaraan tetap tertib dan teratur.
+            </p>
+
+        </div>
+
+
+        <div class="box">
+
+            <div class="icon">
+                🏛️
+            </div>
+
+            <h3>
+                Dukung Pendapatan Daerah
+            </h3>
+
+            <p>
+                Pembayaran pajak merupakan salah satu bentuk
+                kontribusi masyarakat terhadap pendapatan daerah.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         ALUR
+    ========================== -->
+
+    <div class="section-title">
+
+        <small>
+            LANGKAH MUDAH
+        </small>
+
+        <h2>
+            Cara Mengetahui Jatuh Tempo
+        </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <div class="number">
+                1
+            </div>
+
+            <h3>
+                Siapkan Dokumen
+            </h3>
+
+            <p>
+                Siapkan dokumen kendaraan yang diperlukan
+                untuk mengetahui informasi pajak.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                2
+            </div>
+
+            <h3>
+                Periksa Informasi
+            </h3>
+
+            <p>
+                Periksa informasi masa berlaku atau
+                tanggal jatuh tempo kendaraan.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                3
+            </div>
+
+            <h3>
+                Catat Tanggal
+            </h3>
+
+            <p>
+                Catat tanggal jatuh tempo agar tidak
+                terlupa ketika waktu pembayaran tiba.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                4
+            </div>
+
+            <h3>
+                Bayar Tepat Waktu
+            </h3>
+
+            <p>
+                Lakukan pembayaran melalui kanal pelayanan
+                yang tersedia sesuai ketentuan.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         PERINGATAN
+    ========================== -->
+
+    <div class="warning">
+
+        <h2>
+            ⚠️ Perhatikan Jatuh Tempo Kendaraan Anda
+        </h2>
+
+        <p>
+            Jangan menunggu sampai mendekati batas waktu.
+            Pastikan Anda mengetahui tanggal jatuh tempo
+            kendaraan dan menyiapkan persyaratan pembayaran
+            sejak awal.
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         HIGHLIGHT
+    ========================== -->
+
+    <div class="highlight">
+
+        <h2>
+            Ingat Jatuh Tempo, Bayar Tepat Waktu
+        </h2>
+
+        <p>
+            Kepatuhan membayar Pajak Kendaraan Bermotor
+            tepat waktu membantu menciptakan tertib
+            administrasi dan mendukung penerimaan daerah.
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         NAVIGASI
+    ========================== -->
+
+    <div class="navigation">
+
+        <a
+            href="informasi-pkb.html"
+            class="btn btn-gold">
+
+            ← Informasi PKB
+
+        </a>
+
+
+        <a
+            href="pembayaran.html"
+            class="btn btn-green">
+
+            Lanjut ke Pembayaran →
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+
+        <strong>SAPA PKB SIKKa</strong>
+
+        — Sarana Pelayanan dan Informasi
+        Pajak Kendaraan Bermotor Kabupaten Sikka
+
+    </p>
+
+    <p>
+
+        © 2026 UPTD Pendapatan Daerah
+        Wilayah Kabupaten Sikka
+
+    </p>
+
+</footer>
+
+
+</body>
+</html>
