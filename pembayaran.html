@@ -6,13 +6,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pembayaran | SAPA PKB SIKKA</title>
+<title>Pembayaran PKB | SAPA PKB SIKKA</title>
 
 <style>
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -31,25 +31,19 @@ body {
 }
 
 
-/* =========================
-   NAVBAR
-   SAMA DENGAN JATUH TEMPO
-========================= */
-
 /* =====================================================
-   NAVBAR SAPA PKB SIKKA - UKURAN SERAGAM
+   NAVBAR
+   UKURAN DISAMAKAN DENGAN HALAMAN JATUH TEMPO
 ===================================================== */
 
 .navbar {
     width: 100%;
-    min-height: 78px !important;
-    height: 78px !important;
+    min-height: 78px;
+    padding: 12px 5%;
 
-    padding: 12px 5% !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     background: rgba(45, 25, 30, 0.97);
 
@@ -61,137 +55,98 @@ body {
 }
 
 
-/* =========================
-   LOGO
-========================= */
+/* LOGO */
 
-.navbar .logo {
-    display: flex !important;
-    align-items: center !important;
-
-    gap: 11px !important;
-
-    height: 54px !important;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
 }
 
+.logo-icon {
+    width: 46px;
+    height: 46px;
 
-.navbar .logo-icon {
-    width: 46px !important;
-    height: 46px !important;
-
-    min-width: 46px !important;
-    min-height: 46px !important;
-
-    border-radius: 50% !important;
+    border-radius: 50%;
 
     background: #e2b36a;
 
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    font-size: 23px !important;
-
-    padding: 0 !important;
+    font-size: 23px;
 }
 
-
-.navbar .logo-text {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-
-.navbar .logo-text h2 {
-    margin: 0 !important;
-    padding: 0 !important;
-
+.logo-text h2 {
     color: white;
 
-    font-size: 18px !important;
-    line-height: 1.2 !important;
+    font-size: 18px;
 
     letter-spacing: 1px;
 }
 
-
-.navbar .logo-text span {
-    display: block !important;
-
-    margin: 4px 0 0 0 !important;
-    padding: 0 !important;
-
+.logo-text span {
     color: #e8d5b2;
 
-    font-size: 10px !important;
-    line-height: 1.2 !important;
+    font-size: 10px;
 }
 
 
 /* =====================================================
-   MENU
+   MENU NAVIGASI
 ===================================================== */
 
-.navbar .nav-menu {
-    display: flex !important;
+.nav-menu {
+    display: flex;
 
-    align-items: center !important;
+    align-items: center;
 
-    gap: 4px !important;
+    gap: 4px;
 
-    list-style: none !important;
+    list-style: none;
 
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
+}
 
-    height: auto !important;
+.nav-menu li {
+    margin: 0;
+    padding: 0;
 }
 
 
-/* SEMUA MENU HARUS SAMA */
+/* SEMUA MENU SAMA */
 
-.navbar .nav-menu li {
-    margin: 0 !important;
-    padding: 0 !important;
+.nav-menu li a {
+    display: flex;
 
-    height: auto !important;
-
-    display: flex !important;
-    align-items: center !important;
-}
-
-
-.navbar .nav-menu li a {
-    display: flex !important;
-
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: auto !important;
-    min-width: 0 !important;
-
-    height: 42px !important;
-    min-height: 42px !important;
-
-    padding: 10px 12px !important;
-    margin: 0 !important;
-
-    border-radius: 8px !important;
+    align-items: center;
+    justify-content: center;
 
     color: white;
 
-    text-decoration: none !important;
+    text-decoration: none;
 
-    font-family: "Segoe UI", Arial, sans-serif !important;
+    font-family: "Segoe UI", Arial, sans-serif;
 
     font-size: 13px !important;
-    font-weight: 400 !important;
 
-    line-height: 1 !important;
+    font-weight: 400;
 
-    white-space: nowrap !important;
+    line-height: 1;
 
-    box-sizing: border-box !important;
+    padding: 10px 12px !important;
+
+    height: 42px !important;
+
+    min-height: 42px !important;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
 
     transition: 0.3s;
 }
@@ -199,44 +154,650 @@ body {
 
 /* HOVER */
 
-.navbar .nav-menu li a:hover {
-    background: #e2b36a !important;
+.nav-menu li a:hover {
+    background: #e2b36a;
 
-    color: #4b202c !important;
+    color: #4b202c;
 }
 
 
-/* MENU AKTIF
-   UKURANNYA SAMA DENGAN MENU LAIN
-*/
+/* MENU AKTIF */
 
-.navbar .nav-menu li a.active {
-    background: #e2b36a !important;
+.nav-menu li a.active {
+    background: #e2b36a;
 
-    color: #4b202c !important;
+    color: #4b202c;
 
-    font-weight: 600 !important;
+    font-size: 13px !important;
+
+    font-weight: 600;
 
     height: 42px !important;
+
     min-height: 42px !important;
 
     padding: 10px 12px !important;
 
-    border-radius: 8px !important;
+    line-height: 1;
 
-    transform: none !important;
+    transform: none;
 
-    font-size: 13px !important;
-
-    line-height: 1 !important;
-
-    box-shadow: none !important;
+    box-shadow: none;
 }
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.page-header {
+    padding: 75px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4b202c,
+            #274238
+        );
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    border-radius: 30px;
+
+    color: #f2d39b;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+}
+
+.page-header h1 {
+    font-size: clamp(38px, 6vw, 60px);
+
+    margin-bottom: 15px;
+}
+
+.page-header h1 span {
+    color: #e3b66c;
+}
+
+.page-header p {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #eeeeee;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-title small {
+    color: #9b6c35;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    color: #4b202c;
+
+    font-size: 30px;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   PAYMENT MENU
+===================================================== */
+
+.payment-menu {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 60px;
+}
+
+.payment-menu a {
+    background: white;
+
+    padding: 25px 15px;
+
+    border-radius: 18px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+
+    text-decoration: none;
+
+    text-align: center;
+
+    color: #4b202c;
+
+    transition: 0.3s;
+}
+
+.payment-menu a:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.payment-menu .icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 16px;
+
+    background: #f2e3cf;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.payment-menu strong {
+    display: block;
+
+    color: #4b202c;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   PAYMENT CARD
+===================================================== */
+
+.payment-card {
+    background: white;
+
+    padding: 35px;
+
+    margin-bottom: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.payment-card h3 {
+    color: #4b202c;
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.payment-card > p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   LANGKAH PEMBAYARAN
+===================================================== */
+
+.steps {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.step {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    background: #faf8f5;
+
+    border-radius: 14px;
+
+    border: 1px solid #eeeeee;
+}
+
+.number {
+    flex: 0 0 42px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #4b202c;
+
+    color: #e3b66c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+.step h4 {
+    color: #4b202c;
+
+    font-size: 16px;
+
+    margin-bottom: 7px;
+}
+
+.step p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   PRO NTT
+===================================================== */
+
+.digital-card {
+    background:
+        linear-gradient(
+            135deg,
+            #4b202c,
+            #274238
+        );
+
+    padding: 40px;
+
+    margin-bottom: 35px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+}
+
+.digital-card h3 {
+    color: #e3b66c;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.digital-card > p {
+    color: #eeeeee;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.pro-steps {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.pro-step {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 14px;
+}
+
+.pro-step span {
+    flex: 0 0 42px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #e3b66c;
+
+    color: #4b202c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.pro-step p {
+    color: #eeeeee;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.pro-step strong {
+    color: white;
+}
+
+
+/* =====================================================
+   DOWNLOAD BUTTON
+===================================================== */
+
+.download-btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: #e3b66c;
+
+    color: #45202c;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #f1ce91;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   INFO BOX
+===================================================== */
+
+.info-box {
+    padding: 28px;
+
+    margin-top: 35px;
+
+    margin-bottom: 45px;
+
+    border-radius: 18px;
+
+    background: #fff8e9;
+
+    border-left: 6px solid #e2b36a;
+}
+
+.info-box p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.info-box strong {
+    color: #4b202c;
+}
+
+
+/* =====================================================
+   NAVIGATION BUTTON
+===================================================== */
+
+.navigation {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 45px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-gold {
+    background: #e3b66c;
+
+    color: #45202c;
+}
+
+.btn-gold:hover {
+    background: #f1ce91;
+
+    transform: translateY(-3px);
+}
+
+.btn-green {
+    background: #274238;
+
+    color: white;
+}
+
+.btn-green:hover {
+    background: #365c4e;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #181818;
+
+    color: #cccccc;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    font-size: 12px;
+}
+
+footer strong {
+    color: #e2b36a;
+}
+
+footer p + p {
+    margin-top: 7px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 15px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .payment-menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pro-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: auto;
+
+        padding: 15px 10px;
+    }
+
+    .nav-menu {
+        gap: 3px;
+    }
+
+    .nav-menu li a,
+    .nav-menu li a.active {
+        font-size: 11px !important;
+
+        height: 36px !important;
+
+        min-height: 36px !important;
+
+        padding: 8px 7px !important;
+    }
+
+    .payment-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-card {
+        padding: 25px 20px;
+    }
+
+    .digital-card {
+        padding: 25px 20px;
+    }
+
+    .page-header {
+        padding: 55px 20px;
+    }
+
+    .container {
+        padding: 50px 18px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
 <!-- =====================================================
      NAVBAR
 ===================================================== -->
 
 <nav class="navbar">
+
 
     <div class="logo">
 
@@ -296,33 +857,6 @@ body {
         </li>
 
     </ul>
-   /* ===== KUNCI UKURAN MENU NAVBAR ===== */
-
-.navbar .nav-menu li a,
-.navbar .nav-menu li a.active {
-    font-size: 13px !important;
-    font-weight: 400 !important;
-
-    height: 42px !important;
-    min-height: 42px !important;
-
-    padding: 10px 12px !important;
-
-    line-height: 22px !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    box-sizing: border-box !important;
-
-    transform: none !important;
-}
-
-/* khusus menu aktif */
-.navbar .nav-menu li a.active {
-    font-weight: 600 !important;
-}
 
 </nav>
 
@@ -359,9 +893,9 @@ body {
 <main class="container">
 
 
-    <!-- =========================
+    <!-- =================================================
          DAFTAR MENU
-    ========================== -->
+    ================================================== -->
 
     <div class="section-title">
 
@@ -377,6 +911,7 @@ body {
 
 
     <div class="payment-menu">
+
 
         <a href="#kantor-samsat">
 
@@ -428,6 +963,7 @@ body {
             </strong>
 
         </a>
+
 
     </div>
 
@@ -537,7 +1073,7 @@ body {
                     <p>
                         Setelah mendapatkan penetapan jumlah
                         PKB, wajib pajak melakukan pembayaran
-                        melalui loket/kasir yang tersedia.
+                        melalui loket atau kasir yang tersedia.
                     </p>
 
                 </div>
@@ -566,6 +1102,7 @@ body {
                 </div>
 
             </div>
+
 
         </div>
 
@@ -606,8 +1143,9 @@ body {
                     </h4>
 
                     <p>
-                        Wajib pajak datang ke Mall Pelayanan Publik
-                        dan menuju lokasi layanan Samsat Corner.
+                        Wajib pajak datang ke Mall Pelayanan
+                        Publik dan menuju lokasi layanan
+                        Samsat Corner.
                     </p>
 
                 </div>
@@ -725,6 +1263,7 @@ body {
                 </div>
 
             </div>
+
 
         </div>
 
@@ -886,6 +1425,7 @@ body {
 
             </div>
 
+
         </div>
 
     </div>
@@ -905,8 +1445,9 @@ body {
         <p>
             Pembayaran PKB juga dapat dilakukan secara digital
             melalui aplikasi <strong>PRO NTT</strong>.
-            Aplikasi ini memudahkan masyarakat dalam mengakses
-            layanan pajak dan retribusi daerah secara online.
+            Aplikasi ini dapat digunakan untuk memudahkan
+            masyarakat dalam mengakses layanan pajak dan
+            retribusi daerah secara online.
         </p>
 
 
@@ -920,9 +1461,7 @@ body {
                 </span>
 
                 <p>
-                    <strong>
-                        Unduh aplikasi PRO NTT
-                    </strong>
+                    <strong>Unduh aplikasi PRO NTT</strong>
                     melalui Google Play Store pada perangkat Android.
                 </p>
 
@@ -936,9 +1475,7 @@ body {
                 </span>
 
                 <p>
-                    <strong>
-                        Buka aplikasi PRO NTT
-                    </strong>
+                    <strong>Buka aplikasi PRO NTT</strong>
                     dan masuk ke layanan yang tersedia.
                 </p>
 
@@ -952,9 +1489,7 @@ body {
                 </span>
 
                 <p>
-                    <strong>
-                        Pilih layanan Pajak Kendaraan Bermotor (PKB)
-                    </strong>
+                    <strong>Pilih layanan Pajak Kendaraan Bermotor (PKB)</strong>
                     untuk melakukan pengecekan dan pembayaran.
                 </p>
 
@@ -968,9 +1503,7 @@ body {
                 </span>
 
                 <p>
-                    <strong>
-                        Masukkan data kendaraan
-                    </strong>
+                    <strong>Masukkan data kendaraan</strong>
                     sesuai informasi yang diminta pada aplikasi.
                 </p>
 
@@ -984,9 +1517,7 @@ body {
                 </span>
 
                 <p>
-                    <strong>
-                        Periksa informasi tagihan PKB
-                    </strong>
+                    <strong>Periksa informasi tagihan PKB</strong>
                     dan pastikan data serta nominal pembayaran
                     sudah sesuai.
                 </p>
@@ -1001,9 +1532,7 @@ body {
                 </span>
 
                 <p>
-                    <strong>
-                        Lanjutkan pembayaran
-                    </strong>
+                    <strong>Lanjutkan pembayaran</strong>
                     dengan memilih metode pembayaran yang
                     tersedia pada aplikasi.
                 </p>
@@ -1018,9 +1547,7 @@ body {
                 </span>
 
                 <p>
-                    <strong>
-                        Simpan bukti pembayaran
-                    </strong>
+                    <strong>Simpan bukti pembayaran</strong>
                     setelah transaksi berhasil sebagai arsip
                     atau bukti pembayaran.
                 </p>
@@ -1072,6 +1599,7 @@ body {
 
     <div class="navigation">
 
+
         <a
             href="jatuh-tempo.html"
             class="btn btn-gold">
@@ -1088,6 +1616,7 @@ body {
             Lanjut ke Persyaratan →
 
         </a>
+
 
     </div>
 
@@ -1122,5 +1651,4 @@ body {
 
 
 </body>
-
 </html>
