@@ -3,917 +3,1123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Pembayaran PKB - SAPA PKB SIKKA</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-html{scroll-behavior:smooth}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f7f3ee;
-    color:#42202b;
-    line-height:1.7;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ================= NAVBAR ================= */
-.navbar{
-    width:100%;
-    min-height:100px;
-    background:#321d24;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:24px;
-    padding:14px 3.2%;
-    color:#fff;
-    border-bottom:1px solid rgba(255,255,255,.15);
+html {
+    scroll-behavior: smooth;
 }
 
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    flex:0 0 auto;
-    min-width:300px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f3ee;
+    color: #43232b;
 }
 
-.logo-icon{
-    width:64px;
-    height:64px;
-    background:#e8b761;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:29px;
-    flex:0 0 64px;
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 100px;
+    background: #321b22;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo-text{
-    min-width:0;
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 360px;
 }
 
-.logo-text h2{
-    font-size:23px;
-    line-height:1.15;
-    letter-spacing:1px;
-    white-space:nowrap;
+.logo-circle {
+    width: 66px;
+    height: 66px;
+    background: #eab85e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 31px;
+    flex-shrink: 0;
 }
 
-.logo-text p{
-    font-size:12px;
-    color:#e8d3b2;
-    margin-top:4px;
-    white-space:nowrap;
+.logo-text h1 {
+    color: white;
+    font-size: 27px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
 }
 
-.nav-menu{
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    gap:4px;
-    flex:1 1 auto;
-    min-width:0;
+.logo-text p {
+    color: #ead9c5;
+    font-size: 15px;
 }
 
-.nav-menu a{
-    color:#fff;
-    text-decoration:none;
-    padding:12px 14px;
-    height:48px;
-    min-height:48px;
-    border-radius:12px;
-    font-size:16px;
-    line-height:24px;
-    white-space:nowrap;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    flex:0 0 auto;
-    transition:background .25s ease,color .25s ease;
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.nav-menu a:hover{
-    background:rgba(232,183,97,.18);
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+
+    /* PENTING: ukuran menu dibuat tetap */
+    padding: 14px 17px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    white-space: nowrap;
+    transition: 0.25s ease;
 }
 
-.nav-menu a.active{
-    background:#e8b761;
-    color:#42202b;
-    font-weight:bold;
-    height:48px !important;
-    min-height:48px !important;
-    padding:12px 18px !important;
-    line-height:24px !important;
-    flex:0 0 auto !important;
+.menu a:hover {
+    background: rgba(234,184,94,0.18);
 }
 
-/* ================= HERO ================= */
-.hero{
-    min-height:500px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:70px 20px;
-    background:linear-gradient(110deg,rgba(71,30,43,.98),rgba(36,53,47,.96));
-    color:#fff;
+.menu a.active {
+    background: #eab85e;
+    color: #43232b;
+    font-weight: 700;
 }
 
-.hero-content{max-width:1000px}
+/* =========================
+   HERO
+========================= */
 
-.badge{
-    display:inline-block;
-    border:1px solid rgba(255,255,255,.5);
-    border-radius:30px;
-    padding:9px 25px;
-    letter-spacing:3px;
-    font-size:14px;
-    color:#e8b761;
-    margin-bottom:35px;
+.hero {
+    min-height: 530px;
+    background:
+        linear-gradient(
+            110deg,
+            #4b202b 0%,
+            #3a2b30 50%,
+            #243b34 100%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
 }
 
-.hero h1{
-    font-size:65px;
-    line-height:1.1;
-    margin-bottom:25px;
+.hero-content {
+    max-width: 1200px;
 }
 
-.hero h1 span{color:#e8b761}
-
-.hero p{
-    max-width:850px;
-    margin:auto;
-    font-size:20px;
-    color:#f6eee5;
+.label {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.55);
+    border-radius: 35px;
+    padding: 13px 30px;
+    color: #eab85e;
+    letter-spacing: 4px;
+    font-size: 16px;
+    margin-bottom: 45px;
 }
 
-/* ================= CONTENT ================= */
-.section{padding:80px 7%}
-
-.section-title{
-    text-align:center;
-    margin-bottom:55px;
+.hero h2 {
+    color: white;
+    font-size: 76px;
+    line-height: 1.05;
+    margin-bottom: 35px;
+    font-weight: 800;
 }
 
-.section-title .small-title{
-    color:#a8732d;
-    letter-spacing:4px;
-    font-size:14px;
-    font-weight:bold;
-    margin-bottom:10px;
+.hero h2 span {
+    color: #eab85e;
 }
 
-.section-title h2{
-    font-size:38px;
-    color:#4a202d;
+.hero p {
+    color: white;
+    font-size: 23px;
+    line-height: 1.7;
+    max-width: 1100px;
+    margin: auto;
 }
 
-/* ================= INFO BOX ================= */
-.info-box{
-    max-width:1050px;
-    margin:0 auto 70px;
-    background:#fff;
-    padding:35px 40px;
-    border-radius:22px;
-    box-shadow:0 10px 35px rgba(55,30,35,.10);
-    border-left:6px solid #e8b761;
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 80px 7%;
 }
 
-.info-box h3{
-    color:#4a202d;
-    font-size:25px;
-    margin-bottom:12px;
+.section-label {
+    text-align: center;
+    color: #a86f27;
+    letter-spacing: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.info-box p{
-    color:#5d5552;
-    font-size:17px;
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    color: #4a202b;
+    margin-bottom: 55px;
 }
 
-.note{
-    background:#f5eadb;
-    border-left:5px solid #e8b761;
-    padding:18px 22px;
-    border-radius:10px;
-    margin-top:25px;
-    color:#5c4b3d;
+/* =========================
+   DAFTAR MENU
+========================= */
+
+.payment-menu {
+    max-width: 1150px;
+    margin: 0 auto 70px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.note strong{color:#4a202d}
+.payment-menu a {
+    text-decoration: none;
+    color: #43232b;
 
-/* ================= PAYMENT CARDS ================= */
-.payment-card{
-    background:#fff;
-    border-radius:25px;
-    margin:0 auto 45px;
-    max-width:1100px;
-    overflow:hidden;
-    box-shadow:0 12px 40px rgba(55,30,35,.10);
+    background: white;
+    border: 1px solid #eadfd3;
+    border-radius: 18px;
+
+    padding: 25px 18px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(50,27,34,0.08);
+
+    transition: 0.25s ease;
 }
 
-.card-header{
-    background:linear-gradient(100deg,#4a202d,#293c35);
-    color:#fff;
-    padding:25px 35px;
-    display:flex;
-    align-items:center;
-    gap:15px;
+.payment-menu a:hover {
+    transform: translateY(-5px);
+    border-color: #eab85e;
 }
 
-.card-number{
-    width:48px;
-    height:48px;
-    border-radius:50%;
-    background:#e8b761;
-    color:#42202b;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:21px;
-    font-weight:bold;
-    flex-shrink:0;
+.payment-menu .icon {
+    font-size: 34px;
+    margin-bottom: 12px;
 }
 
-.card-header h3{font-size:25px}
-.card-header p{color:#e8d9c8;font-size:14px}
-
-.card-body{padding:35px 40px 40px}
-
-/* ================= STEPS ================= */
-.steps{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
+.payment-menu strong {
+    display: block;
+    font-size: 17px;
+    line-height: 1.4;
 }
 
-.step{
-    display:flex;
-    gap:20px;
-    align-items:flex-start;
-    padding:20px;
-    border-radius:15px;
-    background:#faf7f2;
-    border:1px solid #eee3d7;
+/* =========================
+   CARD
+========================= */
+
+.payment-card {
+    max-width: 1150px;
+    margin: 0 auto 35px;
+
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+
+    box-shadow: 0 10px 35px rgba(50,27,34,0.10);
+
+    border-left: 6px solid #eab85e;
 }
 
-.step-number{
-    width:40px;
-    height:40px;
-    min-width:40px;
-    border-radius:50%;
-    background:#e8b761;
-    color:#42202b;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
+.payment-card h3 {
+    color: #4a202b;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-.step h4{
-    color:#4a202d;
-    font-size:18px;
-    margin-bottom:4px;
+.payment-card > p {
+    color: #5e5552;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
 
-.step p{
-    color:#5f5956;
-    font-size:15px;
+/* =========================
+   STEPS
+========================= */
+
+.steps {
+    display: grid;
+    gap: 15px;
 }
 
-/* ================= FLOW ================= */
-.flow{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:25px;
+.step {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+
+    background: #f8f4ef;
+    border-radius: 15px;
+    padding: 20px;
 }
 
-.flow-item{
-    background:#f5eadb;
-    border:1px solid #e5cda7;
-    color:#4a202d;
-    padding:15px 18px;
-    border-radius:12px;
-    text-align:center;
-    font-weight:bold;
+.number {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+
+    background: #eab85e;
+    color: #43232b;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
 }
 
-.arrow{
-    font-size:25px;
-    color:#a8732d;
+.step h4 {
+    color: #4a202b;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 
-/* ================= FOOTER ================= */
-footer{
-    background:#321d24;
-    color:#fff;
-    text-align:center;
-    padding:35px 20px;
-    margin-top:50px;
+.step p {
+    color: #5e5552;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
-footer p{margin:5px}
-footer span{color:#e8b761}
+/* =========================
+   PRO NTT
+========================= */
 
-/* ================= RESPONSIVE ================= */
-@media(max-width:1200px){
-    .navbar{
-        padding-left:20px;
-        padding-right:20px;
-        gap:12px;
+.digital-card {
+    max-width: 1150px;
+    margin: 55px auto 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            #43212b,
+            #303b35
+        );
+
+    border-radius: 28px;
+    padding: 45px;
+
+    color: white;
+}
+
+.digital-card h3 {
+    color: #eab85e;
+    font-size: 31px;
+    margin-bottom: 15px;
+}
+
+.digital-card > p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.pro-steps {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.pro-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: rgba(255,255,255,0.08);
+    padding: 18px;
+    border-radius: 14px;
+}
+
+.pro-step span {
+    color: #eab85e;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.pro-step p {
+    line-height: 1.6;
+}
+
+/* BUTTON */
+
+.download-btn {
+    display: inline-block;
+
+    background: #eab85e;
+    color: #43232b;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+
+    padding: 15px 25px;
+    border-radius: 13px;
+
+    transition: 0.25s ease;
+}
+
+.download-btn:hover {
+    background: #f3cb7c;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   INFO
+========================= */
+
+.info-box {
+    max-width: 1150px;
+    margin: 40px auto 0;
+
+    background: #fff8e9;
+    border-radius: 18px;
+    padding: 25px;
+
+    border: 1px solid #efd9a9;
+}
+
+.info-box strong {
+    color: #7b5422;
+}
+
+.info-box p {
+    line-height: 1.7;
+    color: #5e5552;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #321b22;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    color: #ead9c5;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        padding: 0 2%;
     }
 
-    .logo-area{
-        min-width:270px;
+    .logo-area {
+        min-width: auto;
     }
 
-    .logo-text h2{font-size:20px}
-    .logo-text p{font-size:11px}
-
-    .nav-menu{
-        gap:2px;
+    .logo-text h1 {
+        font-size: 22px;
     }
 
-    .nav-menu a{
-        font-size:14px;
-        padding:12px 8px;
+    .logo-text p {
+        font-size: 13px;
     }
 
-    .nav-menu a.active{
-        padding:12px 10px !important;
+    .menu a {
+        font-size: 15px;
+        padding: 12px 12px;
+    }
+
+    .hero h2 {
+        font-size: 60px;
     }
 }
 
-@media(max-width:950px){
-    .navbar{
-        flex-direction:column;
-        align-items:center;
-        padding:18px 15px;
+@media (max-width: 900px) {
+
+    .navbar {
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .logo-area{
-        min-width:0;
-        justify-content:center;
+    .logo-area {
+        width: 100%;
+        justify-content: center;
     }
 
-    .nav-menu{
-        width:100%;
-        flex-wrap:wrap;
-        justify-content:center;
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .nav-menu a{
-        font-size:14px;
-        padding:10px 12px;
-        height:44px;
-        min-height:44px;
+    .payment-menu {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .nav-menu a.active{
-        height:44px !important;
-        min-height:44px !important;
-        padding:10px 12px !important;
+    .hero h2 {
+        font-size: 48px;
     }
-
-    .hero h1{font-size:48px}
 }
 
-@media(max-width:600px){
-    .logo-text h2{font-size:20px}
-    .nav-menu{gap:4px}
-    .nav-menu a{
-        font-size:13px;
-        padding:9px 8px;
-        height:40px;
-        min-height:40px;
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 450px;
+        padding: 60px 20px;
     }
 
-    .nav-menu a.active{
-        height:40px !important;
-        min-height:40px !important;
-        padding:9px 8px !important;
+    .hero h2 {
+        font-size: 40px;
     }
 
-    .hero{
-        min-height:420px;
-        padding:55px 18px;
+    .hero p {
+        font-size: 18px;
     }
 
-    .hero h1{font-size:38px}
-    .hero p{font-size:17px}
-    .section{padding:60px 5%}
-    .section-title h2{font-size:30px}
-    .card-body{padding:25px 20px}
-    .card-header{padding:20px}
-    .card-header h3{font-size:20px}
-    .step{gap:13px}
-    .flow-item{padding:12px 14px;font-size:14px}
-}
+    .label {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
 
-/* =========================================================
-   FIX UKURAN HEADER & MENU — DISAMAKAN DENGAN HALAMAN LAIN
-   ========================================================= */
-.navbar{
-    height:100px !important;
-    min-height:100px !important;
-    max-height:100px !important;
-    padding:14px 3.2% !important;
-    box-sizing:border-box !important;
-}
-.logo-area{
-    height:72px !important;
-    min-width:300px !important;
-    flex:0 0 auto !important;
-}
-.logo-icon{
-    width:64px !important;
-    height:64px !important;
-    min-width:64px !important;
-    min-height:64px !important;
-    max-width:64px !important;
-    max-height:64px !important;
-    flex:0 0 64px !important;
-}
-.logo-text h2{
-    font-size:23px !important;
-    line-height:1.15 !important;
-}
-.logo-text p{
-    font-size:12px !important;
-    line-height:1.4 !important;
-    margin-top:4px !important;
-}
-.nav-menu{
-    height:54px !important;
-    display:flex !important;
-    align-items:center !important;
-    gap:4px !important;
-    flex:1 1 auto !important;
-}
-.nav-menu a,
-.nav-menu a.active{
-    height:48px !important;
-    min-height:48px !important;
-    max-height:48px !important;
-    padding:12px 14px !important;
-    margin:0 !important;
-    border-radius:12px !important;
-    font-size:16px !important;
-    line-height:24px !important;
-    box-sizing:border-box !important;
-    display:inline-flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    flex:0 0 auto !important;
-    white-space:nowrap !important;
-}
-.nav-menu a.active{
-    padding:12px 14px !important;
-    font-weight:700 !important;
-}
-.hero{
-    min-height:500px !important;
-    height:500px !important;
-    padding:70px 20px !important;
-    box-sizing:border-box !important;
-}
-.hero-content{
-    width:100% !important;
-    max-width:1000px !important;
-}
-.badge{
-    padding:9px 25px !important;
-    margin-bottom:35px !important;
-    font-size:14px !important;
-    line-height:1.4 !important;
-}
-.hero h1{
-    font-size:65px !important;
-    line-height:1.1 !important;
-    margin-bottom:25px !important;
-}
-.hero p{
-    max-width:850px !important;
-    font-size:20px !important;
-    line-height:1.7 !important;
-}
-@media(max-width:950px){
-    .navbar{
-        height:auto !important;
-        max-height:none !important;
-        padding:18px 15px !important;
+    .payment-menu {
+        grid-template-columns: 1fr;
     }
-    .logo-area{height:auto !important;min-width:0 !important;}
-    .nav-menu{height:auto !important;}
-    .nav-menu a,
-    .nav-menu a.active{
-        height:44px !important;
-        min-height:44px !important;
-        max-height:44px !important;
-        padding:10px 12px !important;
-        font-size:14px !important;
-    }
-    .hero{height:auto !important;min-height:500px !important;}
-    .hero h1{font-size:48px !important;}
-}
-@media(max-width:600px){
-    .nav-menu a,
-    .nav-menu a.active{
-        height:40px !important;
-        min-height:40px !important;
-        max-height:40px !important;
-        padding:9px 8px !important;
-        font-size:13px !important;
-    }
-    .hero{height:auto !important;min-height:420px !important;padding:55px 18px !important;}
-    .hero h1{font-size:38px !important;}
-    .hero p{font-size:17px !important;}
-}
 
+    .payment-card,
+    .digital-card {
+        padding: 25px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<nav class="navbar">
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
     <div class="logo-area">
-        <div class="logo-icon">🚙</div>
-        <div class="logo-text">
-            <h2>SAPA PKB SIKKA</h2>
-            <p>Sarana Pelayanan &amp; Informasi PKB</p>
+
+        <div class="logo-circle">
+            🚙
         </div>
+
+        <div class="logo-text">
+            <h1>SAPA PKB SIKKA</h1>
+            <p>Sarana Pelayanan & Informasi PKB</p>
+        </div>
+
     </div>
 
-    <div class="nav-menu">
-        <a href="index.html">🏠 Beranda</a>
-        <a href="informasi-pkb.html">🚙 Informasi PKB</a>
-        <a href="jatuh-tempo.html">🗓️ Jatuh Tempo</a>
-        <a href="pembayaran.html" class="active">💳 Pembayaran</a>
-        <a href="persyaratan.html">📋 Persyaratan</a>
-        <a href="hubungi-kami.html">☎️ Hubungi Kami</a>
-    </div>
-</nav>
+    <nav class="menu">
+
+        <a href="index.html">
+            🏠 Beranda
+        </a>
+
+        <a href="informasi-pkb.html">
+            🚙 Informasi PKB
+        </a>
+
+        <a href="jatuh-tempo.html">
+            🗓️ Jatuh Tempo
+        </a>
+
+        <a href="pembayaran.html" class="active">
+            💳 Pembayaran
+        </a>
+
+        <a href="persyaratan.html">
+            📋 Persyaratan
+        </a>
+
+        <a href="hubungi-kami.html">
+            ☎️ Hubungi Kami
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
+
     <div class="hero-content">
-        <div class="badge">INFORMASI PEMBAYARAN PKB</div>
-        <h1>Pembayaran <span>PKB</span></h1>
+
+        <div class="label">
+            INFORMASI PEMBAYARAN PKB
+        </div>
+
+        <h2>
+            Pembayaran <span>PKB</span>
+        </h2>
+
         <p>
             Ketahui pilihan tempat dan tahapan pembayaran
             Pajak Kendaraan Bermotor (PKB) dengan mudah,
             tertib, dan sesuai prosedur pelayanan.
         </p>
-    </div>
-</section>
 
-<section class="section">
-
-    <div class="section-title">
-        <div class="small-title">PEMBAYARAN PAJAK KENDARAAN</div>
-        <h2>Bagaimana Cara Membayar PKB?</h2>
-    </div>
-
-    <div class="info-box">
-        <h3>💳 Informasi Cara Pembayaran PKB</h3>
-        <p>
-            Pembayaran Pajak Kendaraan Bermotor (PKB) dapat dilakukan
-            melalui beberapa kanal pelayanan yang tersedia bagi masyarakat,
-            yaitu melalui <strong>Kantor Samsat</strong>,
-            <strong>Samsat Corner di Mall Pelayanan Publik (MPP)</strong>,
-            dan <strong>Samsat Keliling</strong>.
-        </p>
-
-        <div class="note">
-            <strong>💡 Pilih layanan yang sesuai dengan kebutuhan Anda.</strong>
-            Pastikan membawa dokumen persyaratan yang diperlukan
-            sebelum melakukan pembayaran PKB.
-        </div>
-    </div>
-
-    <!-- 1. KANTOR SAMSAT -->
-    <div class="payment-card">
-        <div class="card-header">
-            <div class="card-number">1</div>
-            <div>
-                <h3>🏢 Pembayaran PKB di Kantor Samsat</h3>
-                <p>Pelayanan pembayaran PKB melalui Kantor Bersama Samsat</p>
-            </div>
-        </div>
-
-        <div class="card-body">
-            <div class="steps">
-
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div>
-                        <h4>Datang ke Kantor Samsat</h4>
-                        <p>
-                            Pemilik kendaraan atau pemohon datang ke
-                            Kantor Bersama Samsat dengan membawa dokumen
-                            persyaratan yang diperlukan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div>
-                        <h4>Pendaftaran dan Penetapan</h4>
-                        <p>
-                            Pemohon menuju loket pelayanan untuk melakukan
-                            pendaftaran dan proses penetapan sesuai
-                            jenis pelayanan kendaraan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div>
-                        <h4>Proses Administrasi</h4>
-                        <p>
-                            Berkas diproses oleh unit administrasi terkait
-                            untuk keperluan administrasi STNK/TNKB,
-                            administrasi asuransi/Jasa Raharja,
-                            dan administrasi pajak daerah.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div>
-                        <h4>Pembayaran PKB</h4>
-                        <p>
-                            Setelah proses penetapan selesai, pemohon
-                            melakukan pembayaran melalui kasir atau
-                            bendahara khusus penerima sesuai ketentuan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <div>
-                        <h4>Validasi dan Pencetakan Dokumen</h4>
-                        <p>
-                            Setelah pembayaran dilakukan, dilakukan proses
-                            validasi dan pencetakan dokumen pelayanan
-                            sesuai dengan jenis layanan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">6</div>
-                    <div>
-                        <h4>Penyerahan Dokumen</h4>
-                        <p>
-                            Dokumen kendaraan yang telah selesai diproses
-                            diserahkan kepada pemohon.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="flow">
-                <div class="flow-item">👤 Pemohon</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">📝 Pendaftaran</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">🗂️ Penetapan</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">💳 Pembayaran</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">📄 Penyerahan</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2. SAMSAT CORNER / MPP -->
-    <div class="payment-card">
-        <div class="card-header">
-            <div class="card-number">2</div>
-            <div>
-                <h3>🏬 Pembayaran PKB di Samsat Corner</h3>
-                <p>Layanan Samsat Corner di Mall Pelayanan Publik (MPP)</p>
-            </div>
-        </div>
-
-        <div class="card-body">
-            <div class="steps">
-
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div>
-                        <h4>Datang ke Samsat Corner</h4>
-                        <p>
-                            Pemohon datang ke lokasi layanan
-                            <strong>Samsat Corner di Mall Pelayanan Publik (MPP)</strong>
-                            dengan membawa dokumen persyaratan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div>
-                        <h4>Ambil Nomor Antrean</h4>
-                        <p>
-                            Pemohon mengambil nomor antrean yang tersedia
-                            dan menunggu hingga nomor antrean dipanggil.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div>
-                        <h4>Menunggu Panggilan</h4>
-                        <p>
-                            Pemohon menunggu di area pelayanan sampai
-                            nomor antrean dipanggil oleh petugas.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div>
-                        <h4>Proses Pelayanan</h4>
-                        <p>
-                            Setelah dipanggil, pemohon menuju loket
-                            pelayanan dan menyerahkan dokumen yang
-                            diperlukan untuk proses pembayaran PKB.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <div>
-                        <h4>Melakukan Pembayaran</h4>
-                        <p>
-                            Pemohon melakukan pembayaran PKB sesuai
-                            dengan jumlah yang telah ditetapkan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">6</div>
-                    <div>
-                        <h4>Menerima Bukti/Dokumen Pelayanan</h4>
-                        <p>
-                            Setelah pembayaran selesai, pemohon menerima
-                            bukti atau dokumen pelayanan sesuai dengan
-                            proses layanan yang diberikan.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="flow">
-                <div class="flow-item">🏬 Samsat Corner</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">🎫 Ambil Antrean</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">📢 Dipanggil</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">💳 Pembayaran</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">📄 Bukti Pelayanan</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 3. SAMSAT KELILING -->
-    <div class="payment-card">
-        <div class="card-header">
-            <div class="card-number">3</div>
-            <div>
-                <h3>🚐 Pembayaran PKB melalui Samsat Keliling</h3>
-                <p>Layanan pembayaran PKB melalui mobil Samsat Keliling</p>
-            </div>
-        </div>
-
-        <div class="card-body">
-            <div class="steps">
-
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div>
-                        <h4>Ketahui Jadwal dan Lokasi</h4>
-                        <p>
-                            Ketahui jadwal dan lokasi pelayanan
-                            Samsat Keliling sebelum datang ke lokasi.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div>
-                        <h4>Datang ke Lokasi Samsat Keliling</h4>
-                        <p>
-                            Pemohon datang ke lokasi Samsat Keliling
-                            sesuai jadwal pelayanan dengan membawa
-                            dokumen persyaratan yang diperlukan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div>
-                        <h4>Menyerahkan Dokumen</h4>
-                        <p>
-                            Serahkan dokumen kendaraan kepada petugas
-                            untuk dilakukan pemeriksaan dan proses
-                            pelayanan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div>
-                        <h4>Proses Penetapan PKB</h4>
-                        <p>
-                            Petugas melakukan proses pelayanan dan
-                            memberikan informasi mengenai jumlah PKB
-                            yang harus dibayarkan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <div>
-                        <h4>Melakukan Pembayaran</h4>
-                        <p>
-                            Pemohon melakukan pembayaran PKB sesuai
-                            dengan jumlah yang telah ditetapkan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">6</div>
-                    <div>
-                        <h4>Menerima Bukti Pembayaran</h4>
-                        <p>
-                            Setelah pembayaran selesai, pemohon menerima
-                            bukti pembayaran atau dokumen pelayanan
-                            sesuai dengan layanan yang tersedia.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="flow">
-                <div class="flow-item">🚐 Samsat Keliling</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">📝 Pemeriksaan</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">💳 Pembayaran</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">📄 Bukti Pembayaran</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PENUTUP -->
-    <div class="info-box">
-        <h3>📌 Pilih Layanan Pembayaran yang Sesuai</h3>
-        <p>
-            Masyarakat dapat memilih kanal pelayanan pembayaran PKB
-            sesuai dengan kebutuhan dan lokasi pelayanan yang tersedia.
-            Sebelum datang, pastikan membawa dokumen persyaratan yang
-            diperlukan dan memperhatikan jadwal pelayanan.
-        </p>
-
-        <div class="note">
-            <strong>💡 Bayar PKB tepat waktu.</strong>
-            Dengan memenuhi kewajiban pembayaran PKB, Anda turut
-            mendukung kepatuhan pajak dan optimalisasi pendapatan daerah.
-        </div>
     </div>
 
 </section>
+
+
+<!-- =========================
+     DAFTAR MENU
+========================= -->
+
+<section class="section" id="daftar-menu">
+
+    <div class="section-label">
+        PILIHAN LAYANAN
+    </div>
+
+    <h2 class="section-title">
+        Daftar Menu Pembayaran PKB
+    </h2>
+
+    <div class="payment-menu">
+
+        <a href="#kantor-samsat">
+            <div class="icon">🏢</div>
+            <strong>
+                Kantor Samsat
+            </strong>
+        </a>
+
+        <a href="#samsat-corner">
+            <div class="icon">🏬</div>
+            <strong>
+                Samsat Corner / MPP
+            </strong>
+        </a>
+
+        <a href="#samsat-keliling">
+            <div class="icon">🚐</div>
+            <strong>
+                Samsat Keliling
+            </strong>
+        </a>
+
+        <a href="#pro-ntt">
+            <div class="icon">📱</div>
+            <strong>
+                PRO NTT
+            </strong>
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         KANTOR SAMSAT
+    ========================= -->
+
+    <div class="payment-card" id="kantor-samsat">
+
+        <h3>
+            🏢 Pembayaran PKB di Kantor Samsat
+        </h3>
+
+        <p>
+            Pembayaran PKB dapat dilakukan secara langsung
+            melalui pelayanan di Kantor Samsat sesuai dengan
+            prosedur pelayanan yang berlaku.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="number">1</div>
+
+                <div>
+                    <h4>Pemilik / Pemohon Datang ke Samsat</h4>
+
+                    <p>
+                        Wajib pajak datang ke Kantor Samsat
+                        dengan membawa dokumen persyaratan
+                        yang diperlukan.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">2</div>
+
+                <div>
+                    <h4>Pendaftaran dan Penetapan</h4>
+
+                    <p>
+                        Wajib pajak melakukan pendaftaran,
+                        perpanjangan STNK, pengesahan STNK,
+                        mutasi, atau pelayanan lain sesuai
+                        kebutuhan.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">3</div>
+
+                <div>
+                    <h4>Proses Administrasi</h4>
+
+                    <p>
+                        Dokumen diproses oleh petugas sesuai
+                        tahapan pelayanan administrasi Samsat.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">4</div>
+
+                <div>
+                    <h4>Pembayaran</h4>
+
+                    <p>
+                        Setelah mendapatkan penetapan jumlah
+                        PKB, wajib pajak melakukan pembayaran
+                        melalui loket/kasir yang tersedia.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">5</div>
+
+                <div>
+                    <h4>Validasi dan Penerimaan Dokumen</h4>
+
+                    <p>
+                        Setelah pembayaran selesai, dilakukan
+                        validasi dan wajib pajak menerima dokumen
+                        atau bukti pelayanan yang telah diproses.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         SAMSAT CORNER / MPP
+    ========================= -->
+
+    <div class="payment-card" id="samsat-corner">
+
+        <h3>
+            🏬 Pembayaran PKB di Samsat Corner / MPP
+        </h3>
+
+        <p>
+            Pembayaran PKB juga dapat dilakukan melalui
+            layanan Samsat Corner yang berada di
+            <strong>Mall Pelayanan Publik (MPP)</strong>.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="number">1</div>
+
+                <div>
+                    <h4>Datang ke MPP</h4>
+
+                    <p>
+                        Wajib pajak datang ke Mall Pelayanan Publik
+                        dan menuju lokasi layanan Samsat Corner.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">2</div>
+
+                <div>
+                    <h4>Ambil Nomor Antrean</h4>
+
+                    <p>
+                        Ambil nomor antrean pada layanan
+                        Samsat Corner.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">3</div>
+
+                <div>
+                    <h4>Menunggu Panggilan</h4>
+
+                    <p>
+                        Tunggu hingga nomor antrean dipanggil
+                        oleh petugas.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">4</div>
+
+                <div>
+                    <h4>Serahkan Dokumen Persyaratan</h4>
+
+                    <p>
+                        Setelah dipanggil, serahkan dokumen
+                        persyaratan kepada petugas untuk
+                        dilakukan pemeriksaan dan proses pelayanan.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">5</div>
+
+                <div>
+                    <h4>Lakukan Pembayaran</h4>
+
+                    <p>
+                        Setelah jumlah PKB ditetapkan,
+                        lakukan pembayaran sesuai arahan petugas.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">6</div>
+
+                <div>
+                    <h4>Terima Bukti Pembayaran</h4>
+
+                    <p>
+                        Setelah pembayaran selesai,
+                        terima bukti pembayaran dan dokumen
+                        pelayanan yang telah diproses.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         SAMSAT KELILING
+    ========================= -->
+
+    <div class="payment-card" id="samsat-keliling">
+
+        <h3>
+            🚐 Pembayaran PKB melalui Samsat Keliling
+        </h3>
+
+        <p>
+            Samsat Keliling memberikan kemudahan kepada
+            masyarakat untuk memperoleh pelayanan PKB
+            di lokasi yang telah ditentukan sesuai jadwal
+            pelayanan.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="number">1</div>
+
+                <div>
+                    <h4>Cek Jadwal dan Lokasi</h4>
+
+                    <p>
+                        Pastikan mengetahui jadwal dan lokasi
+                        pelayanan Samsat Keliling.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">2</div>
+
+                <div>
+                    <h4>Datang ke Lokasi</h4>
+
+                    <p>
+                        Datang ke lokasi Samsat Keliling
+                        dengan membawa dokumen persyaratan.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">3</div>
+
+                <div>
+                    <h4>Pendaftaran dan Pemeriksaan</h4>
+
+                    <p>
+                        Serahkan dokumen kepada petugas
+                        untuk dilakukan pemeriksaan dan
+                        proses pelayanan.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">4</div>
+
+                <div>
+                    <h4>Penetapan PKB</h4>
+
+                    <p>
+                        Petugas melakukan proses penetapan
+                        jumlah PKB yang harus dibayarkan.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">5</div>
+
+                <div>
+                    <h4>Pembayaran</h4>
+
+                    <p>
+                        Lakukan pembayaran sesuai jumlah
+                        yang telah ditetapkan.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="number">6</div>
+
+                <div>
+                    <h4>Terima Bukti Pembayaran</h4>
+
+                    <p>
+                        Setelah pembayaran selesai,
+                        terima bukti pembayaran dan dokumen
+                        pelayanan sesuai ketentuan.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PRO NTT
+    ========================= -->
+
+    <div class="digital-card" id="pro-ntt">
+
+        <h3>
+            📱 Pembayaran PKB melalui Kanal Digital PRO NTT
+        </h3>
+
+        <p>
+            Pembayaran PKB juga dapat dilakukan secara digital
+            melalui aplikasi <strong>PRO NTT</strong>.
+            Aplikasi ini dikembangkan untuk memudahkan masyarakat
+            dalam mengecek dan melakukan pembayaran pajak dan
+            retribusi daerah secara online. :contentReference[oaicite:1]{index=1}
+        </p>
+
+
+        <div class="pro-steps">
+
+            <div class="pro-step">
+
+                <span>01</span>
+
+                <p>
+                    <strong>Unduh aplikasi PRO NTT</strong>
+                    melalui Google Play Store pada perangkat Android.
+                </p>
+
+            </div>
+
+
+            <div class="pro-step">
+
+                <span>02</span>
+
+                <p>
+                    <strong>Buka aplikasi PRO NTT</strong>
+                    dan masuk ke layanan yang tersedia.
+                </p>
+
+            </div>
+
+
+            <div class="pro-step">
+
+                <span>03</span>
+
+                <p>
+                    <strong>Pilih layanan Pajak Kendaraan Bermotor (PKB)</strong>
+                    untuk melakukan pengecekan dan pembayaran.
+                </p>
+
+            </div>
+
+
+            <div class="pro-step">
+
+                <span>04</span>
+
+                <p>
+                    <strong>Masukkan data kendaraan</strong>
+                    sesuai informasi yang diminta pada aplikasi.
+                </p>
+
+            </div>
+
+
+            <div class="pro-step">
+
+                <span>05</span>
+
+                <p>
+                    <strong>Periksa informasi tagihan PKB</strong>
+                    dan pastikan data serta nominal pembayaran
+                    sudah sesuai.
+                </p>
+
+            </div>
+
+
+            <div class="pro-step">
+
+                <span>06</span>
+
+                <p>
+                    <strong>Lanjutkan pembayaran</strong>
+                    dengan memilih metode pembayaran yang
+                    tersedia pada aplikasi.
+                </p>
+
+            </div>
+
+
+            <div class="pro-step">
+
+                <span>07</span>
+
+                <p>
+                    <strong>Simpan bukti pembayaran</strong>
+                    setelah transaksi berhasil sebagai arsip
+                    atau bukti pembayaran.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            class="download-btn"
+            href="https://play.google.com/store/apps/details?id=com.iwana.betantt"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            📲 Download PRO NTT di Google Play
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         INFORMASI
+    ========================= -->
+
+    <div class="info-box">
+
+        <p>
+            <strong>💡 Informasi:</strong>
+            Sebelum melakukan pembayaran, pastikan data kendaraan
+            dan dokumen persyaratan telah disiapkan dengan benar.
+            Untuk layanan Samsat Keliling, perhatikan jadwal dan
+            lokasi pelayanan yang tersedia.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-    <p><strong>SAPA PKB SIKKA</strong></p>
-    <p>Sarana Pelayanan &amp; Informasi Pajak Kendaraan Bermotor</p>
-    <p>© 2026 <span>SAPA PKB SIKKA</span></p>
+
+    <p>
+        © 2026 SAPA PKB SIKKA<br>
+        Sarana Pelayanan & Informasi Pajak Kendaraan Bermotor
+    </p>
+
 </footer>
 
 </body>
