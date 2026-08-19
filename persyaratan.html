@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Persyaratan PKB | SAPA PKB SIKKA</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f4f0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+
+    padding: 10px 2.2%;
+
+    display: grid;
+    grid-template-columns: 350px minmax(0, 1fr);
+
+    align-items: center;
+    gap: 15px;
+
+    background: rgba(45, 25, 30, 0.98);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 9999;
+
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-width: 0;
+}
+
+.logo-icon {
+    width: 54px;
+    height: 54px;
+
+    flex: 0 0 54px;
+
+    border-radius: 50%;
+
+    background: #e2b36a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.logo-text {
+    min-width: 0;
+}
+
+.logo-text h2 {
+    color: white;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+.logo-text span {
+    display: block;
+
+    color: #e8d5b2;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    margin-top: 5px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   MENU NAVIGASI
+===================================================== */
+
+.nav-menu {
+    width: 100%;
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+
+    align-items: center;
+
+    gap: 4px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    min-width: 0;
+    width: 100%;
+}
+
+.nav-menu a {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 5px;
+
+    border-radius: 14px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* HOVER */
+
+.nav-menu a:hover {
+    background: #e2b36a;
+
+    color: #4b202c;
+}
+
+
+/* MENU AKTIF */
+
+.nav-menu a.active {
+    background: #e2b36a;
+
+    color: #4b202c;
+}
+
+
+/* =====================================================
+   HEADER / HERO
+===================================================== */
+
+.page-header {
+    min-height: 500px;
+
+    padding: 70px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4b202c,
+            #274238
+        );
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 9px 25px;
+
+    margin-bottom: 35px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    border-radius: 30px;
+
+    color: #f2d39b;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+.page-header h1 {
+    font-size: clamp(44px, 5vw, 64px);
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+
+    font-weight: 700;
+}
+
+.page-header h1 span {
+    color: #e3b66c;
+}
+
+.page-header p {
+    width: min(1000px, 100%);
+
+    margin: 0 auto;
+
+    color: #eeeeee;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+
+/* =====================================================
+   DOKUMEN INFO
+===================================================== */
+
+.document-info {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 50px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+}
+
+.document-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.info-item {
+    padding: 18px;
+
+    background: #faf8f5;
+
+    border-radius: 12px;
+
+    border-left: 4px solid #e2b36a;
+}
+
+.info-item strong {
+    display: block;
+
+    color: #4b202c;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+.info-item span {
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-title small {
+    color: #9b6c35;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    color: #4b202c;
+
+    font-size: 30px;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   REQUIREMENT CARD
+===================================================== */
+
+.requirement-card {
+    background: white;
+
+    padding: 32px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+}
+
+.requirement-card h3 {
+    color: #4b202c;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #f0dfc4;
+}
+
+
+/* =====================================================
+   LIST PERSYARATAN
+===================================================== */
+
+.requirement-list {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.requirement-list li {
+    position: relative;
+
+    padding-left: 30px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.requirement-list li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 1px;
+
+    width: 21px;
+
+    height: 21px;
+
+    border-radius: 50%;
+
+    background: #4b202c;
+
+    color: #e3b66c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   CATATAN
+===================================================== */
+
+.note-box {
+    background: #fff8e9;
+
+    padding: 28px;
+
+    margin-top: 35px;
+
+    margin-bottom: 45px;
+
+    border-radius: 18px;
+
+    border-left: 6px solid #e2b36a;
+}
+
+.note-box strong {
+    color: #4b202c;
+
+    font-size: 14px;
+}
+
+.note-box p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   NAVIGATION BUTTON
+===================================================== */
+
+.navigation {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 45px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-gold {
+    background: #e3b66c;
+
+    color: #45202c;
+}
+
+.btn-gold:hover {
+    background: #f1ce91;
+
+    transform: translateY(-3px);
+}
+
+.btn-green {
+    background: #274238;
+
+    color: white;
+}
+
+.btn-green:hover {
+    background: #365c4e;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #181818;
+
+    color: #cccccc;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    font-size: 12px;
+}
+
+footer strong {
+    color: #e2b36a;
+}
+
+footer p + p {
+    margin-top: 7px;
+}
+
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 1250px) {
+
+    .navbar {
+        grid-template-columns:
+            300px minmax(0, 1fr);
+
+        gap: 10px;
+
+        padding-left: 2%;
+
+        padding-right: 2%;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 48px;
+        height: 48px;
+
+        flex-basis: 48px;
+
+        font-size: 22px;
+    }
+
+    .logo-text h2 {
+        font-size: 17px;
+    }
+
+    .logo-text span {
+        font-size: 9px;
+    }
+
+    .nav-menu {
+        gap: 2px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+
+        padding-left: 3px;
+
+        padding-right: 3px;
+
+        height: 50px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 12px 20px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .nav-menu {
+        grid-template-columns:
+            repeat(7, minmax(0, 1fr));
+
+        width: 100%;
+    }
+
+    .nav-menu a {
+        font-size: 10px;
+
+        height: 44px;
+
+        border-radius: 10px;
+    }
+
+    .page-header {
+        min-height: 430px;
+    }
+
+    .document-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   HP
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 12px 10px;
+
+        gap: 12px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .nav-menu {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 5px;
+    }
+
+    .nav-menu li:last-child {
+        grid-column: span 2;
+    }
+
+    .nav-menu a {
+        height: 40px;
+
+        font-size: 11px;
+
+        padding: 5px;
+
+        border-radius: 10px;
+    }
+
+    .page-header {
+        min-height: 400px;
+
+        padding: 55px 20px;
+    }
+
+    .badge {
+        margin-bottom: 25px;
+
+        font-size: 10px;
+
+        padding: 8px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 42px;
+
+        margin-bottom: 25px;
+    }
+
+    .page-header p {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 50px 18px;
+    }
+
+    .document-info {
+        padding: 22px;
+    }
+
+    .requirement-card {
+        padding: 25px 20px;
+    }
+
+    .requirement-card h3 {
+        font-size: 19px;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   HP SANGAT KECIL
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .logo-text h2 {
+        font-size: 15px;
+    }
+
+    .logo-text span {
+        font-size: 8px;
+    }
+
+    .nav-menu a {
+        font-size: 10px;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            🚗
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SAPA PKB SIKKA</h2>
+
+            <span>
+                Sarana Pelayanan & Informasi PKB
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <ul class="nav-menu">
+
+        <li>
+            <a href="index.html">
+                🏠 Beranda
+            </a>
+        </li>
+
+        <li>
+            <a href="informasi-pkb.html">
+                🚗 Informasi PKB
+            </a>
+        </li>
+
+        <li>
+            <a href="jatuh-tempo.html">
+                📅 Jatuh Tempo
+            </a>
+        </li>
+
+        <li>
+            <a href="pembayaran.html">
+                💳 Pembayaran
+            </a>
+        </li>
+
+        <li>
+            <a href="persyaratan.html" class="active">
+                📋 Persyaratan
+            </a>
+        </li>
+
+        <li>
+            <a href="tempat-waktu-pelayanan.html">
+                📍 Tempat & Waktu
+            </a>
+        </li>
+
+        <li>
+            <a href="hubungi-kami.html">
+                ☎️ Hubungi Kami
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="page-header">
+
+    <div class="badge">
+        INFORMASI PERSYARATAN PKB
+    </div>
+
+    <h1>
+        Persyaratan <span>PKB</span>
+    </h1>
+
+    <p>
+        Ketahui dokumen yang perlu disiapkan untuk
+        berbagai layanan Pajak Kendaraan Bermotor (PKB)
+        secara lengkap dan mudah dipahami.
+    </p>
+
+</header>
+
+
+
+<!-- =====================================================
+     KONTEN
+===================================================== -->
+
+<main class="container">
+
+
+    <!-- =================================================
+         INFORMASI DOKUMEN
+    ================================================== -->
+
+    <div class="document-info">
+
+        <div class="document-info-grid">
+
+
+            <div class="info-item">
+
+                <strong>
+                    📄 Judul Dokumen
+                </strong>
+
+                <span>
+                    Persyaratan Pelayanan Pajak Kendaraan Bermotor
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <strong>
+                    📝 Keterangan
+                </strong>
+
+                <span>
+                    Daftar dokumen umum untuk layanan tahunan,
+                    lima tahunan, dan perubahan data kendaraan.
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <strong>
+                    📅 Tanggal Pembaruan
+                </strong>
+
+                <span>
+                    19 Agustus 2026
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <strong>
+                    📌 Status Dokumen
+                </strong>
+
+                <span>
+                    Bahan identifikasi – wajib divalidasi
+                    sebelum publikasi
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <strong>
+                    👤 Penanggung Jawab Konten
+                </strong>
+
+                <span>
+                    Tim Aktualisasi SAPA PKB SIKKA /
+                    UPTD Pendapatan Daerah Wilayah Kabupaten Sikka
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         JUDUL
+    ================================================== -->
+
+    <div class="section-title">
+
+        <small>
+            DOKUMEN PERSYARATAN
+        </small>
+
+        <h2>
+            Persyaratan Pelayanan PKB
+        </h2>
+
+    </div>
+
+
+
+    <!-- =================================================
+         A. TAHUNAN
+    ================================================== -->
+
+    <div class="requirement-card">
+
+        <h3>
+            A. Pembayaran PKB Tahunan dan Pengesahan STNK
+        </h3>
+
+        <ul class="requirement-list">
+
+            <li>
+                KTP asli pemilik kendaraan sesuai identitas pada STNK.
+            </li>
+
+            <li>
+                STNK asli.
+            </li>
+
+            <li>
+                BPKB asli atau dokumen pendukung sesuai ketentuan
+                kanal/loket yang digunakan.
+            </li>
+
+            <li>
+                Surat kuasa bermeterai dan identitas penerima kuasa
+                apabila diwakilkan, sesuai ketentuan petugas.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- =================================================
+         B. LIMA TAHUNAN
+    ================================================== -->
+
+    <div class="requirement-card">
+
+        <h3>
+            B. Perpanjangan STNK Lima Tahunan
+        </h3>
+
+        <ul class="requirement-list">
+
+            <li>
+                KTP asli pemilik kendaraan dan salinannya.
+            </li>
+
+            <li>
+                STNK asli dan salinannya.
+            </li>
+
+            <li>
+                BPKB asli dan salinannya.
+            </li>
+
+            <li>
+                Kendaraan dihadirkan untuk pemeriksaan fisik.
+            </li>
+
+            <li>
+                Bukti cek fisik dan formulir permohonan dari
+                loket terkait.
+            </li>
+
+            <li>
+                Surat kuasa jika pengurusan diwakilkan,
+                sesuai ketentuan.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- =================================================
+         C. BALIK NAMA
+    ================================================== -->
+
+    <div class="requirement-card">
+
+        <h3>
+            C. Balik Nama atau Perubahan Kepemilikan
+        </h3>
+
+        <ul class="requirement-list">
+
+            <li>
+                KTP pemilik baru.
+            </li>
+
+            <li>
+                STNK dan BPKB asli.
+            </li>
+
+            <li>
+                Bukti sah pengalihan kepemilikan,
+                misalnya kuitansi jual beli bermeterai.
+            </li>
+
+            <li>
+                Kendaraan untuk pemeriksaan fisik.
+            </li>
+
+            <li>
+                Dokumen tambahan bila kendaraan berasal dari
+                luar wilayah atau dimiliki badan hukum.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- =================================================
+         D. MUTASI
+    ================================================== -->
+
+    <div class="requirement-card">
+
+        <h3>
+            D. Mutasi Kendaraan
+        </h3>
+
+        <ul class="requirement-list">
+
+            <li>
+                KTP pemilik, STNK, dan BPKB asli.
+            </li>
+
+            <li>
+                Kendaraan untuk pemeriksaan fisik.
+            </li>
+
+            <li>
+                Bukti pengalihan kepemilikan apabila bersamaan
+                dengan balik nama.
+            </li>
+
+            <li>
+                Berkas fiskal/administrasi asal sesuai ketentuan
+                registrasi kendaraan.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CATATAN
+    ================================================== -->
+
+    <div class="note-box">
+
+        <strong>
+            💡 Catatan Penting
+        </strong>
+
+        <p>
+            Persyaratan di atas merupakan daftar dokumen umum
+            untuk identifikasi awal. Ketentuan dapat berbeda
+            sesuai jenis layanan, kanal/loket, kondisi kendaraan,
+            serta ketentuan yang berlaku. Pastikan melakukan
+            validasi persyaratan kepada petugas sebelum publikasi
+            atau sebelum melakukan pelayanan.
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         NAVIGASI
+    ================================================== -->
+
+    <div class="navigation">
+
+        <a
+            href="pembayaran.html"
+            class="btn btn-gold">
+
+            ← Pembayaran
+
+        </a>
+
+
+        <a
+            href="tempat-waktu-pelayanan.html"
+            class="btn btn-green">
+
+            Lanjut ke Tempat & Waktu →
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+
+        <strong>SAPA PKB SIKKA</strong>
+
+        — Sarana Pelayanan dan Informasi
+        Pajak Kendaraan Bermotor Kabupaten Sikka
+
+    </p>
+
+    <p>
+
+        © 2026 UPTD Pendapatan Daerah
+        Wilayah Kabupaten Sikka
+
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
