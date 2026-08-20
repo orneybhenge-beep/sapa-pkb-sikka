@@ -797,6 +797,120 @@ footer p + p {
     }
 }
 
+/* =====================================================
+   NAVBAR PERSYARATAN — DISAMAKAN DENGAN BERANDA
+===================================================== */
+
+body .navbar {
+    width: 100% !important;
+    min-height: 78px !important;
+    padding: 12px 5% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+}
+
+body .logo {
+    gap: 11px !important;
+    min-width: auto !important;
+}
+
+body .logo-icon {
+    width: 46px !important;
+    height: 46px !important;
+    flex: 0 0 46px !important;
+    font-size: 23px !important;
+}
+
+body .logo-text h2 {
+    font-size: 18px !important;
+    line-height: normal !important;
+    letter-spacing: 1px !important;
+}
+
+body .logo-text span {
+    font-size: 10px !important;
+    line-height: normal !important;
+    margin-top: 0 !important;
+}
+
+body .nav-menu {
+    width: auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    grid-template-columns: none !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    gap: 4px !important;
+}
+
+body .nav-menu li,
+body .nav-menu li:last-child {
+    width: auto !important;
+    min-width: 0 !important;
+    display: list-item !important;
+    grid-column: auto !important;
+}
+
+body .nav-menu a,
+body .nav-menu a.active {
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    transform: none !important;
+}
+
+@media (max-width: 1000px) {
+    body .navbar {
+        flex-direction: column !important;
+        gap: 12px !important;
+        padding: 15px !important;
+    }
+
+    body .logo {
+        justify-content: center !important;
+    }
+
+    body .nav-menu {
+        width: 100% !important;
+        display: flex !important;
+        grid-template-columns: none !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 4px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    body .logo-text h2 {
+        font-size: 16px !important;
+    }
+
+    body .nav-menu {
+        gap: 2px !important;
+    }
+
+    body .nav-menu a,
+    body .nav-menu a.active {
+        padding: 8px 7px !important;
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    body .nav-menu a,
+    body .nav-menu a.active {
+        font-size: 10px !important;
+    }
+}
+
 </style>
 
 </head>
