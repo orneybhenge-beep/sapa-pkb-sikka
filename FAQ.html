@@ -39,5 +39,18 @@
 <details class="faq-item"><summary>Bagaimana cara menghubungi petugas?</summary><div class="answer">Anda dapat menghubungi layanan WhatsApp SAPA PKB SIKKA pada nomor 0822 4744 7202 untuk memperoleh informasi dan bantuan pelayanan.</div></details>
 </div><section class="help"><h3>Belum menemukan jawaban?</h3><p>Hubungi layanan WhatsApp SAPA PKB SIKKA untuk mendapatkan informasi lebih lanjut.</p><a class="wa-btn" href="https://wa.me/6282247447202" target="_blank" rel="noopener">💬 Hubungi melalui WhatsApp</a></section></main>
 <footer><p><strong>SAPA PKB SIKKA</strong> — Sarana Pelayanan dan Informasi Pajak Kendaraan Bermotor Kabupaten Sikka</p><p>© 2026 UPTD Pendapatan Daerah Wilayah Kabupaten Sikka</p></footer>
+<script>
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    item.addEventListener('toggle', function () {
+      if (item.open) {
+        const pertanyaan = item.querySelector('summary').textContent.trim();
+
+        gtag('event', 'faq_open', {
+          faq_question: pertanyaan
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
