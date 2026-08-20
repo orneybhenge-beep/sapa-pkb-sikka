@@ -850,16 +850,21 @@ body .nav-menu {
 body .nav-menu li,
 body .nav-menu li:last-child {
     width: auto !important;
+    max-width: max-content !important;
     min-width: 0 !important;
-    display: list-item !important;
+    display: block !important;
+    flex: 0 0 auto !important;
     grid-column: auto !important;
 }
 
 body .nav-menu a,
 body .nav-menu a.active {
     width: auto !important;
+    max-width: max-content !important;
     min-width: 0 !important;
     height: auto !important;
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
     padding: 10px 12px !important;
     border-radius: 8px !important;
     font-size: 13px !important;
@@ -885,6 +890,24 @@ body .nav-menu a.active {
         justify-content: center !important;
         flex-wrap: wrap !important;
         gap: 4px !important;
+    }
+
+    body .nav-menu li,
+    body .nav-menu li:last-child {
+        width: auto !important;
+        max-width: max-content !important;
+        min-width: 0 !important;
+        display: block !important;
+        flex: 0 0 auto !important;
+    }
+
+    body .nav-menu a,
+    body .nav-menu a.active {
+        width: auto !important;
+        max-width: max-content !important;
+        min-width: 0 !important;
+        display: inline-flex !important;
+        flex: 0 0 auto !important;
     }
 }
 
