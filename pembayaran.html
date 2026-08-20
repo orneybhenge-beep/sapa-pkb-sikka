@@ -1020,6 +1020,127 @@ footer p + p {
     }
 }
 
+/* =====================================================
+   PERBAIKAN UKURAN MENU
+   Disamakan dengan halaman Beranda, Informasi PKB,
+   dan Jatuh Tempo. Isi halaman lainnya tidak diubah.
+===================================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 78px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+}
+
+.logo {
+    gap: 11px;
+}
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    font-size: 23px;
+}
+
+.logo-text h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    font-size: 10px;
+    margin-top: 0;
+}
+
+.nav-menu {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-menu li {
+    width: auto;
+    display: list-item;
+}
+
+.nav-menu a,
+.nav-menu a.active {
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    transform: none;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .nav-menu li,
+    .nav-menu li:last-child {
+        width: auto;
+        display: list-item;
+        grid-column: auto;
+    }
+
+    .nav-menu a,
+    .nav-menu a.active {
+        width: auto;
+        min-width: 0;
+        height: auto;
+        padding: 10px 12px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-text h2 {
+        font-size: 16px;
+    }
+
+    .nav-menu {
+        gap: 2px;
+    }
+
+    .nav-menu a,
+    .nav-menu a.active {
+        padding: 8px 7px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-menu a,
+    .nav-menu a.active {
+        font-size: 10px;
+    }
+}
+
 </style>
 
 </head>
