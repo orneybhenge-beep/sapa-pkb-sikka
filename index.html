@@ -1,14 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SAPA PKB SIKKA</title>
+<title>SAPA PKB SIKKA | Beranda</title>
 
 <style>
- 
+
 /* =====================================================
    RESET
 ===================================================== */
@@ -27,28 +27,7 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f7f4f0;
     color: #333;
-}
-
-
-/* =====================================================
-   BACKGROUND UTAMA
-===================================================== */
-
-.hero {
-    min-height: 100vh;
-
-    background-image:
-        linear-gradient(
-            rgba(55, 25, 35, 0.72),
-            rgba(30, 55, 45, 0.72)
-        ),
-        url("./gedung-gubernur-ntt.jpeg");
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    position: relative;
+    overflow-x: hidden;
 }
 
 
@@ -58,111 +37,172 @@ body {
 
 .navbar {
     width: 100%;
+    min-height: 82px;
 
-    min-height: 78px;
+    padding: 10px 3%;
 
-    padding: 12px 5%;
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
 
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
 
-    background: rgba(45, 25, 30, 0.90);
+    background: #321d23;
 
-    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1000;
 
-    position: sticky;
-    top: 0;
-
-    z-index: 9999;
-
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 
-/* LOGO */
+/* =====================================================
+   LOGO
+===================================================== */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 11px;
+    gap: 12px;
+
+    min-width: 0;
 }
 
 .logo-icon {
-    width: 46px;
-    height: 46px;
+    width: 52px;
+    height: 52px;
+
+    flex: 0 0 52px;
 
     border-radius: 50%;
 
-    background: #e2b36a;
+    background: #e3b66c;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 23px;
+    font-size: 25px;
+}
+
+.logo-text {
+    min-width: 0;
 }
 
 .logo-text h2 {
     color: white;
 
-    font-size: 18px;
+    font-size: 22px;
 
-    letter-spacing: 1px;
+    line-height: 1.2;
+
+    letter-spacing: 0.4px;
+
+    white-space: nowrap;
 }
 
 .logo-text span {
-    color: #e8d5b2;
+    display: block;
 
-    font-size: 10px;
+    color: #ead7b4;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    margin-top: 4px;
+
+    white-space: nowrap;
 }
 
 
-/* MENU */
+/* =====================================================
+   MENU NAVIGASI
+===================================================== */
 
 .nav-menu {
-    display: flex;
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
 
     align-items: center;
 
-    gap: 4px;
+    gap: 3px;
 
     list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    width: 100%;
+    min-width: 0;
 }
 
 .nav-menu a {
+    width: 100%;
+    min-width: 0;
+
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 6px;
+
+    border-radius: 14px;
+
     color: white;
 
     text-decoration: none;
 
     font-size: 13px;
 
-    padding: 10px 12px;
+    font-weight: 600;
 
-    border-radius: 8px;
+    white-space: nowrap;
 
-    transition: 0.3s;
+    overflow: hidden;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
-
-    background: #e2b36a;
+.nav-menu a:hover {
+    background: #e3b66c;
 
     color: #4b202c;
+}
 
+.nav-menu a.active {
+    background: #e3b66c;
+
+    color: #4b202c;
 }
 
 
 /* =====================================================
-   HERO CONTENT
+   HERO / BERANDA
 ===================================================== */
 
-.hero-content {
+.hero {
+    width: 100%;
 
-    min-height: calc(100vh - 78px);
+    min-height: 560px;
+
+    padding: 70px 30px;
 
     display: flex;
+
+    flex-direction: column;
 
     align-items: center;
 
@@ -170,193 +210,123 @@ body {
 
     text-align: center;
 
-    padding: 70px 20px;
-}
-
-
-.hero-content-inner {
-
-    max-width: 850px;
-
     color: white;
 
+    background:
+        linear-gradient(
+            135deg,
+            #4b202c,
+            #274238
+        );
 }
 
 
-/* BADGE */
+/* =====================================================
+   HERO BADGE
+===================================================== */
 
 .badge {
-
     display: inline-block;
 
-    padding: 8px 18px;
+    padding: 9px 24px;
 
-    margin-bottom: 22px;
+    margin-bottom: 28px;
 
     border: 1px solid rgba(255,255,255,0.5);
 
     border-radius: 30px;
 
-    background: rgba(255,255,255,0.10);
-
     color: #f2d39b;
 
-    font-size: 12px;
-
-    letter-spacing: 1.5px;
-}
-
-
-/* JUDUL */
-
-.hero-content h1 {
-
-    font-size: clamp(42px, 7vw, 75px);
-
-    line-height: 1.05;
+    font-size: 13px;
 
     letter-spacing: 2px;
-
-    margin-bottom: 18px;
-
-    text-shadow: 0 5px 25px rgba(0,0,0,0.5);
-
-}
-
-.hero-content h1 span {
-
-    color: #e3b66c;
-
-}
-
-
-/* SUBJUDUL */
-
-.hero-content h3 {
-
-    font-size: 19px;
-
-    font-weight: 400;
-
-    color: #f5ead8;
-
-    margin-bottom: 20px;
-
-}
-
-
-/* DESKRIPSI */
-
-.hero-content p {
-
-    max-width: 720px;
-
-    margin: auto;
-
-    line-height: 1.8;
-
-    font-size: 15px;
-
-    color: #eeeeee;
 }
 
 
 /* =====================================================
-   TOMBOL
+   HERO TITLE
 ===================================================== */
 
-.button-group {
+.hero h1 {
+    font-size: clamp(44px, 6vw, 70px);
 
-    margin-top: 32px;
+    line-height: 1.1;
 
-    display: flex;
+    margin-bottom: 25px;
 
-    justify-content: center;
+    font-weight: 700;
+}
 
-    gap: 12px;
-
-    flex-wrap: wrap;
+.hero h1 span {
+    color: #e3b66c;
 }
 
 
-.btn {
+/* =====================================================
+   HERO TEXT
+===================================================== */
 
-    display: inline-block;
+.hero p {
+    width: min(900px, 100%);
 
-    padding: 13px 23px;
+    margin: 0 auto;
+
+    color: #eeeeee;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   WELCOME TEXT
+===================================================== */
+
+.welcome {
+    margin-top: 30px;
+
+    padding: 12px 25px;
 
     border-radius: 30px;
 
-    text-decoration: none;
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    color: #f2d39b;
 
     font-size: 14px;
-
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
-
-.btn-primary {
-
-    background: #e3b66c;
-
-    color: #45202c;
-}
-
-
-.btn-primary:hover {
-
-    background: #f1ce91;
-
-    transform: translateY(-3px);
-}
-
-
-.btn-outline {
-
-    color: white;
-
-    border: 1px solid rgba(255,255,255,0.7);
-
-    background: rgba(255,255,255,0.08);
-}
-
-
-.btn-outline:hover {
-
-    background: white;
-
-    color: #4b202c;
-
-    transform: translateY(-3px);
 }
 
 
 /* =====================================================
-   SECTION LAYANAN
+   CONTENT
 ===================================================== */
 
-.services {
+.container {
+    width: 100%;
 
-    padding: 75px 6%;
+    max-width: 1100px;
 
-    background: #ffffff;
+    margin: auto;
 
-    color: #333;
+    padding: 65px 25px;
 }
 
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
 
 .section-title {
-
     text-align: center;
 
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 
-
 .section-title small {
-
     color: #9b6c35;
 
     font-size: 12px;
@@ -366,79 +336,54 @@ body {
     letter-spacing: 2px;
 }
 
-
 .section-title h2 {
-
     color: #4b202c;
 
-    font-size: 32px;
+    font-size: 30px;
 
     margin-top: 8px;
 }
 
 
-.section-title p {
-
-    color: #777;
-
-    margin-top: 10px;
-
-    font-size: 14px;
-}
-
-
 /* =====================================================
-   6 KARTU
+   SERVICE CARDS
 ===================================================== */
 
 .service-grid {
-
-    max-width: 1150px;
-
-    margin: auto;
-
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
-    gap: 22px;
+    gap: 20px;
 }
 
-
 .service-card {
-
     background: white;
 
     padding: 30px 22px;
 
     border-radius: 18px;
 
-    text-align: center;
-
     border: 1px solid #eeeeee;
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,0.07);
+        0 8px 25px rgba(0,0,0,0.06);
+
+    text-align: center;
 
     transition: 0.3s;
 }
 
-
 .service-card:hover {
-
-    transform: translateY(-7px);
+    transform: translateY(-5px);
 
     box-shadow:
-        0 15px 35px rgba(0,0,0,0.13);
+        0 15px 30px rgba(0,0,0,0.10);
 }
 
-
-/* ICON */
-
 .service-icon {
-
     width: 65px;
-
     height: 65px;
 
     margin: 0 auto 18px;
@@ -450,131 +395,157 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     font-size: 30px;
 }
 
-
 .service-card h3 {
-
     color: #4b202c;
 
-    font-size: 19px;
+    font-size: 18px;
 
     margin-bottom: 10px;
 }
 
-
 .service-card p {
-
     color: #777;
 
     font-size: 13px;
 
     line-height: 1.7;
-
-    min-height: 65px;
-
-    margin-bottom: 18px;
 }
 
-
 .service-card a {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 9px 18px;
+
+    border-radius: 25px;
+
+    background: #e3b66c;
+
+    color: #45202c;
 
     text-decoration: none;
 
-    color: #9b6c35;
+    font-size: 12px;
 
-    font-size: 13px;
-
-    font-weight: bold;
-}
-
-
-.service-card a:hover {
-
-    text-decoration: underline;
+    font-weight: 600;
 }
 
 
 /* =====================================================
-   TENTANG SAPA
+   INFO BOX
 ===================================================== */
 
-.about {
+.info-box {
+    margin-top: 45px;
 
-    padding: 75px 7%;
+    padding: 28px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #4b202c,
-            #274238
-        );
+    border-radius: 18px;
 
-    color: white;
+    background: #fff8e9;
+
+    border-left: 6px solid #e2b36a;
+}
+
+.info-box h3 {
+    color: #4b202c;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
 }
 
 
-.about-container {
+/* =====================================================
+   QUICK MENU
+===================================================== */
 
-    max-width: 900px;
+.quick-menu {
+    margin-top: 50px;
 
-    margin: auto;
+    display: grid;
 
-    text-align: center;
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
 }
 
+.quick-menu a {
+    display: flex;
 
-.about-container h2 {
+    align-items: center;
 
-    font-size: 32px;
+    gap: 15px;
 
-    margin-bottom: 20px;
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.05);
+
+    text-decoration: none;
+
+    color: #4b202c;
+
+    transition: 0.3s;
 }
 
+.quick-menu a:hover {
+    transform: translateY(-3px);
 
-.about-container p {
+    background: #fffaf2;
+}
+
+.quick-icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    border-radius: 13px;
+
+    background: #f2e3cf;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.quick-menu strong {
+    display: block;
 
     font-size: 15px;
 
-    line-height: 1.8;
-
-    color: #eeeeee;
+    margin-bottom: 3px;
 }
 
+.quick-menu span {
+    color: #777;
 
-/* =====================================================
-   AJAKAN
-===================================================== */
-
-.call-to-action {
-
-    padding: 65px 20px;
-
-    text-align: center;
-
-    background: #f4e6d2;
-
-    color: #4b202c;
-}
-
-
-.call-to-action h2 {
-
-    font-size: 30px;
-
-    margin-bottom: 12px;
-}
-
-
-.call-to-action p {
-
-    color: #666;
-
-    margin-bottom: 25px;
+    font-size: 12px;
 }
 
 
@@ -583,7 +554,6 @@ body {
 ===================================================== */
 
 footer {
-
     background: #181818;
 
     color: #cccccc;
@@ -595,118 +565,467 @@ footer {
     font-size: 12px;
 }
 
-
 footer strong {
-
     color: #e2b36a;
 }
 
-
 footer p + p {
-
     margin-top: 7px;
 }
 
 
 /* =====================================================
-   RESPONSIVE
+   LAPTOP
 ===================================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
 
     .navbar {
+        grid-template-columns:
+            245px minmax(0, 1fr);
 
-        flex-direction: column;
+        gap: 10px;
 
-        gap: 12px;
-
-        padding: 15px;
+        padding-left: 2%;
+        padding-right: 2%;
     }
 
-    .nav-menu {
-
-        justify-content: center;
-
-        flex-wrap: wrap;
+    .logo {
+        gap: 8px;
     }
 
-    .service-grid {
+    .logo-icon {
+        width: 46px;
+        height: 46px;
 
-        grid-template-columns: repeat(2, 1fr);
+        flex-basis: 46px;
+
+        font-size: 22px;
     }
-
-}
-
-
-@media (max-width: 600px) {
 
     .logo-text h2 {
+        font-size: 18px;
+    }
 
-        font-size: 16px;
+    .logo-text span {
+        font-size: 9px;
     }
 
     .nav-menu {
-
         gap: 2px;
     }
 
     .nav-menu a {
-
         font-size: 11px;
 
-        padding: 8px 7px;
+        padding-left: 3px;
+        padding-right: 3px;
+
+        height: 50px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        padding: 12px 18px;
     }
 
-    .hero-content {
-
-        padding: 50px 18px;
+    .logo {
+        justify-content: center;
     }
 
-    .hero-content h1 {
+    .nav-menu {
+        grid-template-columns:
+            repeat(7, minmax(0, 1fr));
 
-        font-size: 45px;
+        width: 100%;
     }
 
-    .hero-content h3 {
+    .nav-menu a {
+        height: 44px;
 
-        font-size: 16px;
+        font-size: 10px;
+
+        border-radius: 10px;
     }
 
-    .hero-content p {
-
-        font-size: 13px;
+    .hero {
+        min-height: 470px;
     }
 
     .service-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
 
+
+/* =====================================================
+   HP
+   MENU RAPAT - TIDAK ADA JARAK BESAR
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------------
+       NAVBAR
+    ----------------------------------------------- */
+
+    .navbar {
+        width: 100%;
+
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 14px 10px 12px;
+
+        gap: 9px;
+
+        position: relative;
+    }
+
+
+    /* -----------------------------------------------
+       LOGO
+    ----------------------------------------------- */
+
+    .logo {
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        margin: 0;
+    }
+
+
+    .logo-icon {
+        width: 50px;
+        height: 50px;
+
+        flex: 0 0 50px;
+
+        font-size: 23px;
+    }
+
+
+    .logo-text h2 {
+        font-size: 19px;
+
+        line-height: 1.2;
+    }
+
+
+    .logo-text span {
+        font-size: 9px;
+
+        margin-top: 3px;
+    }
+
+
+    /* -----------------------------------------------
+       MENU
+    ----------------------------------------------- */
+
+    .nav-menu {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 3px 5px;
+
+        margin: 0;
+
+        padding: 0;
+    }
+
+
+    .nav-menu li {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    .nav-menu a {
+        width: 100%;
+
+        height: 40px;
+
+        padding: 0 4px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 9px;
+
+        font-size: 11px;
+
+        font-weight: 600;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+    }
+
+
+    /* MENU TERAKHIR DI TENGAH */
+
+    .nav-menu li:last-child {
+        grid-column: 1 / -1;
+
+        width: 50%;
+
+        justify-self: center;
+    }
+
+
+    /* -----------------------------------------------
+       HERO
+    ----------------------------------------------- */
+
+    .hero {
+        width: 100%;
+
+        min-height: 420px;
+
+        padding: 40px 18px 45px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .badge {
+        margin-bottom: 18px;
+
+        padding: 7px 15px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .hero h1 {
+        font-size: 40px;
+
+        line-height: 1.1;
+
+        margin-bottom: 18px;
+    }
+
+
+    .hero p {
+        width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .welcome {
+        margin-top: 22px;
+
+        padding: 10px 16px;
+
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------
+       CONTENT
+    ----------------------------------------------- */
+
+    .container {
+        width: 100%;
+
+        padding: 40px 16px;
+    }
+
+
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+
+    /* -----------------------------------------------
+       SERVICE
+    ----------------------------------------------- */
+
+    .service-grid {
         grid-template-columns: 1fr;
+
+        gap: 12px;
     }
 
-    .services {
 
-        padding: 55px 20px;
+    .service-card {
+        padding: 24px 18px;
+
+        border-radius: 15px;
     }
 
-    .about {
 
-        padding: 55px 20px;
+    /* -----------------------------------------------
+       QUICK MENU
+    ----------------------------------------------- */
+
+    .quick-menu {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-top: 35px;
     }
 
+
+    .quick-menu a {
+        padding: 16px;
+    }
+
+
+    /* -----------------------------------------------
+       INFO BOX
+    ----------------------------------------------- */
+
+    .info-box {
+        margin-top: 30px;
+
+        padding: 20px;
+
+        border-radius: 14px;
+    }
+
+
+    /* -----------------------------------------------
+       FOOTER
+    ----------------------------------------------- */
+
+    footer {
+        padding: 22px 15px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =====================================================
+   HP SANGAT KECIL
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 12px 8px 10px;
+
+        gap: 7px;
+    }
+
+
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+
+        flex-basis: 45px;
+
+        font-size: 21px;
+    }
+
+
+    .logo-text h2 {
+        font-size: 17px;
+    }
+
+
+    .logo-text span {
+        font-size: 8px;
+    }
+
+
+    .nav-menu {
+        gap: 2px 4px;
+    }
+
+
+    .nav-menu a {
+        height: 38px;
+
+        font-size: 10px;
+
+        border-radius: 8px;
+    }
+
+
+    .nav-menu li:last-child {
+        width: 50%;
+    }
+
+
+    .hero {
+        min-height: 360px;
+
+        padding: 30px 15px 35px;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .hero p {
+        font-size: 13px;
+    }
+
+
+    .welcome {
+        font-size: 11px;
+    }
 }
 
 </style>
-
 </head>
 
 
 <body>
-
-
-<!-- =====================================================
-     BERANDA
-===================================================== -->
-
-<section class="hero">
 
 
 <!-- =====================================================
@@ -715,8 +1034,6 @@ footer p + p {
 
 <nav class="navbar">
 
-
-    <!-- LOGO -->
 
     <div class="logo">
 
@@ -727,19 +1044,17 @@ footer p + p {
         <div class="logo-text">
 
             <h2>
-                SAPA PKB SIKKa
+                SAPA PKB SIKKA
             </h2>
 
             <span>
-                Sarana Pelayanan & Informasi PKB
+                Sarana Pelayanan &amp; Informasi PKB
             </span>
 
         </div>
 
     </div>
 
-
-    <!-- MENU NAVIGASI -->
 
     <ul class="nav-menu">
 
@@ -772,11 +1087,12 @@ footer p + p {
                 📋 Persyaratan
             </a>
         </li>
-       <li>
-    <a href="tempat-waktu-pelayanan.html">
-        📍 Tempat & Waktu
-    </a>
-</li>
+
+        <li>
+            <a href="tempat-waktu-pelayanan.html">
+                📍 Tempat &amp; Waktu
+            </a>
+        </li>
 
         <li>
             <a href="hubungi-kami.html">
@@ -789,120 +1105,74 @@ footer p + p {
 </nav>
 
 
+
 <!-- =====================================================
-     HERO
+     HERO / BERANDA
 ===================================================== -->
 
-<div class="hero-content">
-
-    <div class="hero-content-inner">
+<header class="hero">
 
 
-        <div class="badge">
-
-            PELAYANAN PUBLIK • INFORMASI • EDUKASI
-
-        </div>
-
-
-        <h1>
-
-            SAPA <span>PKB SIKKA</span>
-
-        </h1>
-
-
-        <h3>
-
-            Sarana Pelayanan dan Informasi
-            Pajak Kendaraan Bermotor Kabupaten Sikka
-
-        </h3>
-
-
-        <p>
-
-            Selamat datang di SAPA PKB SIKKA.
-            Pusat informasi pelayanan Pajak Kendaraan Bermotor
-            yang mudah diakses, informatif, dan membantu masyarakat
-            memahami kewajiban Pajak Kendaraan Bermotor.
-
-        </p>
-
-
-        <!-- TOMBOL NAVIGASI UTAMA -->
-
-        <div class="button-group">
-
-
-            <a
-                href="informasi-pkb.html"
-                class="btn btn-primary">
-
-                📖 Edukasi PKB
-
-            </a>
-
-
-            <a
-                href="pembayaran.html"
-                class="btn btn-outline">
-
-                💳 Cara Pembayaran
-
-            </a>
-
-
-            <a
-                href="persyaratan.html"
-                class="btn btn-outline">
-
-                📋 Persyaratan
-
-            </a>
-
-
-        </div>
-
-
+    <div class="badge">
+        SARANA PELAYANAN &amp; INFORMASI PKB
     </div>
 
-</div>
 
-</section>
+    <h1>
+        SAPA <span>PKB SIKKA</span>
+    </h1>
+
+
+    <p>
+        Pusat informasi pelayanan Pajak Kendaraan Bermotor
+        Kabupaten Sikka yang mudah diakses, informatif,
+        dan membantu masyarakat memperoleh informasi
+        pelayanan PKB dengan lebih mudah.
+    </p>
+
+
+    <div class="welcome">
+        👋 Selamat Datang di SAPA PKB SIKKA
+    </div>
+
+
+</header>
 
 
 
 <!-- =====================================================
-     6 MENU LAYANAN
+     KONTEN
 ===================================================== -->
 
-<section class="services">
+<main class="container">
 
+
+    <!-- =================================================
+         JUDUL
+    ================================================== -->
 
     <div class="section-title">
 
         <small>
-            LAYANAN SAPA PKB SIKKa
+            LAYANAN INFORMASI
         </small>
 
         <h2>
-            Informasi yang Anda Butuhkan
+            Informasi Pelayanan PKB
         </h2>
-
-        <p>
-            Pilih layanan untuk mendapatkan informasi
-            pelayanan Pajak Kendaraan Bermotor.
-        </p>
 
     </div>
 
 
 
+    <!-- =================================================
+         SERVICE CARDS
+    ================================================== -->
+
     <div class="service-grid">
 
 
-        <!-- 1 INFORMASI PKB -->
+        <!-- INFORMASI PKB -->
 
         <div class="service-card">
 
@@ -916,18 +1186,19 @@ footer p + p {
 
             <p>
                 Informasi mengenai Pajak Kendaraan Bermotor,
-                edukasi perpajakan, dan informasi pelayanan.
+                ketentuan pelayanan, serta hal-hal penting
+                yang perlu diketahui wajib pajak.
             </p>
 
             <a href="informasi-pkb.html">
-                Selengkapnya →
+                Lihat Informasi
             </a>
 
         </div>
 
 
 
-        <!-- 2 JATUH TEMPO -->
+        <!-- JATUH TEMPO -->
 
         <div class="service-card">
 
@@ -940,19 +1211,20 @@ footer p + p {
             </h3>
 
             <p>
-                Informasi mengenai jatuh tempo pembayaran
-                dan pentingnya membayar pajak tepat waktu.
+                Kenali dan perhatikan tanggal jatuh tempo
+                pembayaran Pajak Kendaraan Bermotor agar
+                tidak terlambat melakukan pembayaran.
             </p>
 
             <a href="jatuh-tempo.html">
-                Lihat Jatuh Tempo →
+                Cek Jatuh Tempo
             </a>
 
         </div>
 
 
 
-        <!-- 3 PEMBAYARAN -->
+        <!-- PEMBAYARAN -->
 
         <div class="service-card">
 
@@ -965,19 +1237,20 @@ footer p + p {
             </h3>
 
             <p>
-                Panduan dan informasi mengenai tata cara
-                pembayaran Pajak Kendaraan Bermotor.
+                Ketahui pilihan tempat dan tahapan pembayaran
+                PKB melalui berbagai kanal pelayanan yang
+                tersedia.
             </p>
 
             <a href="pembayaran.html">
-                Cara Pembayaran →
+                Lihat Pembayaran
             </a>
 
         </div>
 
 
 
-        <!-- 4 PERSYARATAN -->
+        <!-- PERSYARATAN -->
 
         <div class="service-card">
 
@@ -990,19 +1263,20 @@ footer p + p {
             </h3>
 
             <p>
-                Ketahui dokumen dan persyaratan yang perlu
-                disiapkan sebelum melakukan pelayanan.
+                Ketahui dokumen yang perlu dipersiapkan
+                untuk berbagai jenis pelayanan Pajak
+                Kendaraan Bermotor.
             </p>
 
             <a href="persyaratan.html">
-                Lihat Persyaratan →
+                Lihat Persyaratan
             </a>
 
         </div>
 
 
 
-        <!-- 5 LOKASI / JAM LAYANAN -->
+        <!-- TEMPAT & WAKTU -->
 
         <div class="service-card">
 
@@ -1011,23 +1285,24 @@ footer p + p {
             </div>
 
             <h3>
-                Lokasi & Jam Layanan
+                Tempat &amp; Waktu
             </h3>
 
             <p>
-                Informasi lokasi, jam pelayanan,
-                dan jadwal pelayanan kepada masyarakat.
+                Informasi mengenai lokasi pelayanan,
+                jadwal pelayanan, serta kanal pelayanan
+                PKB yang tersedia.
             </p>
 
-            <a href="hubungi-kami.html">
-                Lihat Informasi →
+            <a href="tempat-waktu-pelayanan.html">
+                Lihat Jadwal
             </a>
 
         </div>
 
 
 
-        <!-- 6 HUBUNGI KAMI -->
+        <!-- HUBUNGI KAMI -->
 
         <div class="service-card">
 
@@ -1040,12 +1315,13 @@ footer p + p {
             </h3>
 
             <p>
-                Dapatkan informasi dan bantuan terkait
-                pelayanan Pajak Kendaraan Bermotor.
+                Dapatkan informasi kontak dan bantuan
+                terkait pelayanan Pajak Kendaraan Bermotor
+                di Kabupaten Sikka.
             </p>
 
             <a href="hubungi-kami.html">
-                Hubungi Kami →
+                Hubungi Kami
             </a>
 
         </div>
@@ -1053,84 +1329,140 @@ footer p + p {
 
     </div>
 
-</section>
 
 
+    <!-- =================================================
+         INFORMASI
+    ================================================== -->
 
-<!-- =====================================================
-     TENTANG SAPA PKB SIKKa
-===================================================== -->
+    <div class="info-box">
 
-<section class="about">
-
-
-    <div class="about-container">
-
-        <h2>
-            Tentang SAPA PKB SIKKA
-        </h2>
-
+        <h3>
+            💡 Informasi Pelayanan
+        </h3>
 
         <p>
-
-            SAPA PKB SIKKA merupakan sarana informasi
-            pelayanan Pajak Kendaraan Bermotor Kabupaten Sikka
-            yang dikembangkan untuk memudahkan masyarakat
-            memperoleh informasi secara cepat, mudah,
-            informatif, dan mudah dipahami.
-
-        </p>
-
-
-        <br>
-
-
-        <p>
-
-            SAPA PKB SIKKA diharapkan dapat mendukung
-            peningkatan edukasi, kesadaran, dan kepatuhan
-            masyarakat dalam memenuhi kewajiban Pajak
-            Kendaraan Bermotor serta mendukung optimalisasi
-            pendapatan daerah.
-
+            SAPA PKB SIKKA hadir sebagai sarana informasi
+            untuk membantu masyarakat memperoleh informasi
+            pelayanan Pajak Kendaraan Bermotor secara lebih
+            mudah, jelas, dan terarah.
         </p>
 
     </div>
 
-</section>
+
+
+    <!-- =================================================
+         MENU CEPAT
+    ================================================== -->
+
+    <div class="section-title" style="margin-top:55px;">
+
+        <small>
+            AKSES CEPAT
+        </small>
+
+        <h2>
+            Menu Pelayanan
+        </h2>
+
+    </div>
+
+
+    <div class="quick-menu">
+
+
+        <a href="pembayaran.html">
+
+            <div class="quick-icon">
+                💳
+            </div>
+
+            <div>
+
+                <strong>
+                    Pembayaran PKB
+                </strong>
+
+                <span>
+                    Lihat pilihan kanal pembayaran PKB
+                </span>
+
+            </div>
+
+        </a>
 
 
 
-<!-- =====================================================
-     AJAKAN
-===================================================== -->
+        <a href="persyaratan.html">
 
-<section class="call-to-action">
+            <div class="quick-icon">
+                📋
+            </div>
 
+            <div>
 
-    <h2>
-        Ayo Bayar Pajak Tepat Waktu
-    </h2>
+                <strong>
+                    Persyaratan Pelayanan
+                </strong>
 
+                <span>
+                    Cek dokumen yang perlu disiapkan
+                </span>
 
-    <p>
+            </div>
 
-        Pajak tepat waktu, pelayanan semakin mudah,
-        pembangunan daerah semakin kuat.
-
-    </p>
-
-
-    <a
-        href="pembayaran.html"
-        class="btn btn-primary">
-
-        💳 Lihat Pembayaran
-
-    </a>
+        </a>
 
 
-</section>
+
+        <a href="tempat-waktu-pelayanan.html">
+
+            <div class="quick-icon">
+                📍
+            </div>
+
+            <div>
+
+                <strong>
+                    Tempat &amp; Waktu
+                </strong>
+
+                <span>
+                    Lihat lokasi dan jadwal pelayanan
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="hubungi-kami.html">
+
+            <div class="quick-icon">
+                ☎️
+            </div>
+
+            <div>
+
+                <strong>
+                    Hubungi Kami
+                </strong>
+
+                <span>
+                    Informasi kontak pelayanan
+                </span>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+</main>
 
 
 
@@ -1163,5 +1495,5 @@ footer p + p {
 
 
 </body>
-</html>
 
+</html>
