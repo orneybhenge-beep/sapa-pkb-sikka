@@ -17,7 +17,7 @@ gtag('config','G-BHC3HHL6MV');
 </style>
 </head>
 <body>
-<nav class="navbar"><div class="logo"><div class="logo-icon">🚗</div><div class="logo-text"><h2>SAPA PKB SIKKa</h2><span>Sarana Pelayanan & Informasi PKB</span></div></div><ul class="nav-menu"><li><a href="index.html">🏠 Beranda</a></li><li><a href="informasi-pkb.html">🚗 Informasi PKB</a></li><li><a href="jatuh-tempo.html">📅 Jatuh Tempo</a></li><li><a href="pembayaran.html">💳 Pembayaran</a></li><li><a href="persyaratan.html">📋 Persyaratan</a></li><li><a href="tempat-waktu-pelayanan.html">📍 Tempat & Waktu</a></li><li><a href="faq.html" class="active">❓ FAQ</a></li></ul></nav>
+<nav class="navbar"><div class="logo"><div class="logo-icon">🚗</div><div class="logo-text"><h2>SAPA PKB SIKKA</h2><span>Sarana Pelayanan & Informasi PKB</span></div></div><ul class="nav-menu"><li><a href="index.html">🏠 Beranda</a></li><li><a href="informasi-pkb.html">🚗 Informasi PKB</a></li><li><a href="jatuh-tempo.html">📅 Jatuh Tempo</a></li><li><a href="pembayaran.html">💳 Pembayaran</a></li><li><a href="persyaratan.html">📋 Persyaratan</a></li><li><a href="tempat-waktu-pelayanan.html">📍 Tempat & Waktu</a></li><li><a href="faq.html" class="active">❓ FAQ</a></li></ul></nav>
 <header class="page-header"><div class="badge">PERTANYAAN YANG SERING DIAJUKAN</div><h1>FAQ <span>SAPA PKB SIKKA</span></h1><p>Temukan jawaban singkat mengenai Pajak Kendaraan Bermotor, persyaratan, pembayaran, dan pelayanan SAMSAT di Kabupaten Sikka.</p></header>
 <main class="container"><div class="section-title"><small>INFORMASI PELAYANAN</small><h2>Pertanyaan Umum</h2><p>Klik pertanyaan untuk melihat jawabannya.</p></div><div class="faq-list">
 <details class="faq-item"><summary>Apa itu Pajak Kendaraan Bermotor (PKB)?</summary><div class="answer">PKB adalah pajak atas kepemilikan dan/atau penguasaan kendaraan bermotor. Pembayaran dilakukan sesuai masa pajak dan tanggal jatuh tempo yang tercantum pada dokumen kendaraan.</div></details>
@@ -33,12 +33,13 @@ gtag('config','G-BHC3HHL6MV');
 </div><section class="help"><h3>Belum menemukan jawaban?</h3><p>Hubungi layanan WhatsApp SAPA PKB SIKKA untuk mendapatkan informasi lebih lanjut.</p><a class="wa-btn" href="https://wa.me/6282247447202" target="_blank" rel="noopener">💬 Hubungi melalui WhatsApp</a></section></main>
 <footer><p><strong>SAPA PKB SIKKA</strong> — Sarana Pelayanan dan Informasi Pajak Kendaraan Bermotor Kabupaten Sikka</p><p>© 2026 UPTD Pendapatan Daerah Wilayah Kabupaten Sikka</p></footer>
 <script>
-document.querySelectorAll('.faq-item summary').forEach(function(pertanyaan){
-  pertanyaan.addEventListener('click',function(){
-    gtag('event','faq_open',{
-      faq_question:pertanyaan.textContent.trim(),
-      debug_mode:true
-    });
+document.addEventListener('click',function(event){
+  var pertanyaan=event.target.closest('.faq-item summary');
+  if(!pertanyaan){return;}
+  gtag('event','faq_open',{
+    faq_question:pertanyaan.textContent.trim(),
+    page_title:document.title,
+    page_location:window.location.href
   });
 });
 </script>
